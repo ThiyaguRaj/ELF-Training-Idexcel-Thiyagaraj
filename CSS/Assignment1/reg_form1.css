@@ -1,0 +1,47 @@
+body{
+    font-family: sans-serif;
+    color: rgb(199, 198, 198);
+
+}
+form{
+    border: 1px solid black;
+    width: 240px;
+    height: 333px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    background-color: black;
+}
+.small{
+    width: 70px;
+}
+#name{
+    margin-right: 7px;
+}
+.submit{
+    float: right;
+    margin-right: 30px;
+}
+.inp{
+    width: 167px;
+}
+input{
+    padding-left: 10px;
+    background-color: rgb(245, 244, 244);
+    font-size: xx-small;
+    border: 1px solid rgb(245, 244, 244);
+}
+input[type="submit"]{
+    background-color: green;
+    border-color: green;
+    color: silver;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(7, 238, 238);
+    color: black;
+}
+h5{
+    margin-right: 40px;
+}
