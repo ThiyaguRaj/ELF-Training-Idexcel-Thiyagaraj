@@ -1,0 +1,77 @@
+body{
+    font-family: sans-serif;
+    background: linear-gradient(violet, rgb(51, 170, 240));
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+form{
+    border: 1px solid violet;
+    /* text-align: center; */
+    width: 255px;
+    height: 328px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: rgb(3, 34, 85);
+    padding-right: 0px;
+}
+#part2{
+    padding-left: 23px;
+}
+.lab{
+    font-size: 6px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.inp{
+    width: 200px;
+    margin-bottom: 10px;
+    height: 20px;
+    padding-left: 10px;
+    border: 1px solid white;
+    color: rgb(51, 47, 47);
+}
+input[type="checkbox"]{
+   margin-top: 10px;
+}
+label{
+    margin-right: 10px;
+    padding: 0;
+    /* float: left; */
+    margin-left: 15px;
+}
+input{
+    border-radius: 3px;
+}
+input[type="submit"]{
+    margin-left: 127px;
+    margin-right: 20px;
+    margin-top: 17px;
+    width: 65px;
+    color: white;
+    background-color: rgb(21, 112, 21);
+    border: 1px solid rgb(21, 112, 21);
+    font-size: xx-small;
+    height: 15px;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+h4{
+    background: rgb(3, 30, 61);
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    width: initial;
+    padding: 10px;
+    color: white;
+    border-bottom: none;
+    border-radius: 5px;
+}
+::placeholder{
+    font-size: xx-small;
+    color: silver;
+}
