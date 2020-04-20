@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background: rgb(68, 68, 68); */
+    /* background-color: #191919; */
+    /* background: linear-gradient(hsl(0, 0%, 3%) 60%, #f7f8fc 00%);
+    height: 100vh; */
+    /* background: linear-gradient(to right, #20ac61, #373b44); */
+    background: black;
+}
+nav{
+    border: 0px solid black;
+    /* max-width: max-content; */
+    /* margin: 30px 30px; */
+    width: 100%;
+    /* background: #1a2430; */
+    background: rgb(87, 87, 87);
+    /* background: #080808; */
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    /* left: auto;
+    right: 50%; */
+    text-align: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    padding: 20px;
+    /* text-align: center; */
+}
+.para2 p{
+    padding: 0;
+    margin: 0;
+}
+.intro{
+    /* top: 37%;
+    left: 72%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    bottom: 60%; */
+    padding-top: 100px;
+    text-align: center;
+    background: gray;
+    padding: 50px;
+    padding-bottom: 40px;
+    /* background: rgb(238, 235, 235); */
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    /* margin-top: 50px; */
+}
+ul li a{
+    color: white;
+    text-transform: uppercase;
+}
+ul li.nnav a:hover{
+    /* color: rgb(31, 235, 235); */
+    border-bottom: 4px solid red;
+    padding-bottom: 16px;
+}
+.intro h1{
+    /* color: rgb(158, 157, 157); */
+    color: black;
+    /* text-transform: uppercase; */
+    font-size: 24px;
+    font-weight: 1000;
+    width: inherit;
+    border: 0px solid ;
+    padding: 5px;
+    /* padding-top: 50px; */
+    font-family: 'Times New Roman', Times, serif;
+    /* border-bottom: 1px solid black; */
+    border: 0px solid green;
+    
+    /* width: fit-content; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin: 0 auto; */
+    margin: 50px auto 0 auto;
+    /* background: rgb(87, 87, 87); */
+    background: rgb(179, 176, 176);
+    border-radius: 50px;
+    padding: 8px 100px;
+    width: 380px;
+}
+.intro p{
+    color: black;
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+    margin-left: 4px;
+    margin-top: 40px;
+    line-height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+li{
+    padding: 10px 20px;
+    display: inline;
+}
+ul .login a{
+    background: black;
+    padding: inherit;
+    border-radius: 4px;
+}
+ul .login a:hover{
+    background: white;
+    color: black;
+}
+a img{
+    width: 40px;
+    height: 40px;
+    padding-left: 20px;
+}
+.media{
+    text-align: center;
+    margin-top: 300px;
+}
+.intro img{
+    width: 80px;
+    height: 80px;
+}
