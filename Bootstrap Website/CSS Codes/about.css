@@ -1,0 +1,32 @@
+body{
+    background: black !important;
+}
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.heading{
+    background: gray;
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    text-align: center;
+    padding: 100px !important;
+}
+.about{
+    background: black;
+    height: 50vh;
+    color: rgb(184, 181, 181);
+    text-align: center;
+}
+p{
+    padding: 40px !important;
+    line-height: 50px;
+}
+button{
+    margin-top: 50px !important;
+    width: 200px;
+    height: 60px;
+    border-radius: 70px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+}
