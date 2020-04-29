@@ -1,0 +1,47 @@
+body{
+    background: black !important;
+}
+.hov a:hover{
+    color: rgb(39, 197, 197) !important;
+}
+img{
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+}
+.nav li a button{
+    height: 30px;
+    padding: 0 10px;
+    font-size: large;
+}
+.navbar-brand h4:hover{
+    transition: 2s all;
+    transform: rotate(-360deg);
+}
+.navbar-brand h4{
+    color: gray;
+}
+.nav li a{
+    margin-left: 20px;
+    font-size: large;
+}
+.logospan{
+    color: teal;
+}
+.intro{
+    background: gray;
+    text-align: center;
+    padding: 50px;
+}
+.intro h1{
+    padding: 20px;
+}
+.intro p{
+    line-height: 50px;
+}
+.media{
+    background: black;
+}
+.mediaIn{
+    margin: 197px auto;
+}
