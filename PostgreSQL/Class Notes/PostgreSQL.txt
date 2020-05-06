@@ -204,3 +204,20 @@ DQL:
 Expressions:
 	1. It is a statement, Which gives some result.
 	2. It consists of operators and operands.
+
+DISTINCT:
+	1. Used to remove duplicate rows from a table
+		a. if, we are passing single argument with distinct, it will remove duplicate values.
+		b. if, we use two column name with distinct keyword, the it will remove duplicates with combination of columns
+
+	Syntax --> Select distinct col_name from table_name;
+	Example --> Select distinct ename from employee;
+
+COMPARISION OPERATORS:
+
+	The following are the comparision operators in sql
+		( =,<,>,>=,<=,!=,<> )
+
+	Example:
+		select * from employee where deptno=10;
+LOGICAL OPERATOR:

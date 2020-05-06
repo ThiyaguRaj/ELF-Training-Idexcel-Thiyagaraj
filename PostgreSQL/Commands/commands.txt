@@ -107,3 +107,51 @@ ALIAS:
 8. Write a Query to display per day salery of all the employee.
 
 	select sal/30 as sal_perday from employee;
+
+_____________________________________________________________________________________________________________________
+
+DISTINCT:
+	* Used to eliminate duplicate values.
+
+		1. if, we are passing single argument with distinct, it will remove duplicate values.
+		2. if, we use two column name with distinct keyword, the it will remove duplicates with combination of columns
+
+1. Write a query to display distinct name from employee table
+	
+	select distinct ename from employee;
+
+2. Write a query to display multiple column with distinct keyword
+
+	select distinct sal,ename,designation from employee;
+
+____________________________________________________________________________________________________________________________
+
+COMPARISION OPERATORS:
+
+1. Write a query to display sal of emp is equal to 25,000
+
+	select sal from employee where sal=25,000;
+
+2. Write a query to display all records of employee who are getting sal greater than 25000
+
+	select * from employee where sal>25000;
+
+3. Write a query to display all records of employee who are getting sal greater than or equal to 25000
+
+	select * from employee where sal>=25000;	
+
+4. Write a Querty to display all records of employee who are getting sal less than 25000
+
+	select * from employee where sal<25000;
+
+5. Write a Querty to display all records of employee who are getting sal less than or equal to 25000
+
+	select * from employee where sal<=25000;
+
+6. Write a Querty to display all records of employee who are getting sal other than 25000
+
+	select * from employee where sal!=25000;
+			(OR)
+	select * from employee where sal<>25000;
+
+LOGICAL OPERATOR:
