@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="/CSS Codes/gallery.css">
     <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="container-fluid">
+<body class="bg-dark">
+    <div class="container bg-dark">
         <div class="col-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <a href="/Html Codes/index.html" class="navbar-brand">
+                    <h4 title="Home">T<span class="logospan">R</span></h4>
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav navbar-nav ml-auto mr-auto">
+                        <li class="nav-item active"><a href="/Html Codes/login.html" class="nav-link mr-5"><button
+                                    class="btn btn-success">LOGIN</button></a></li>
+                        <li class="nav-item hov"><a href="/Html Codes/about.html" class="nav-link">ABOUT</a></li>
+                        <li class="nav-item hov"><a href="/Html Codes/gallery.html" class="nav-link">GALLERY</a></li>
+                        <li class="nav-item hov"><a href="/Html Codes/contact.html" class="nav-link">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
             <div class="headng">
                 <h1>Gallery</h1>
             </div>
@@ -33,11 +53,14 @@
                 <img src="/Images/gallery/new2.jpg" alt="Photo">
                 <img src="/Images/gallery/new1.jpg" alt="Photo">
             </figure>
-            <a href="/HTML Codes/index.html"><button class="btn btn-outline-success">Back</button></a>
+            <a id="end" href="/HTML Codes/index.html"><button class="btn btn-outline-success">Back</button></a>
         </div>
     </div>
 
-    <script src="/js/jquery-3.5.0.js"></script>
-    <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="/js/jquery-3.5.0.js"></script>
+    <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

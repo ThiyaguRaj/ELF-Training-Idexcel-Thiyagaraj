@@ -1,28 +1,64 @@
-input{
-    border: none;
-    border-bottom: 1px solid green;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    background: none;
-    outline: none;
-    color: white;
+.hov a:hover{
+    color: rgb(39, 197, 197) !important;
 }
-button{
-    margin: 10px 0 10px 0 !important;
+.nav li a button{
+    height: 30px;
+    padding: 0 10px;
+    font-size: large;
 }
-h1{
-    border-bottom: 6px solid green;
-    width: fit-content;
-    margin-bottom: 30px !important;
-    color: white;
+.navbar-brand h4:hover{
+    transition: 2s all;
+    transform: rotate(-360deg);
 }
+.navbar-brand h4{
+    color: gray;
+}
+.nav li a{
+    margin-left: 20px;
+    font-size: large;
+}
+.logospan{
+    color: teal;
+}
+/* form properties */
 form{
+    max-width: 300px;
     border: 1px solid black;
+    margin: auto;
     padding: 40px;
+    border-radius: 5px;
+    margin-top: 8%;
     background: black;
-    border-radius: 8px;
+}
+form div{
+    margin: 35px 0;
+}
+.sign button{
+    width: 100%;
+}
+.bak button{
+    width: 50%;
+}
+.bak{
+    text-align: center;
+}
+legend{
+    font-size: 40px !important;
+    font-weight: 600;
+    border-bottom: 5px solid green;
+    width: fit-content !important;
+    color: white !important;
+}
+input[type="email"], input[type="password"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid green;
+    background: none;
+}
+form button{
+    border: 3px solid !important;
 }
 body{
-    background: #1e2a38 !important;
-    color: white;
+    background: rgb(0, 13, 26) !important;
+    /* background: rgb(39, 39, 39) !important; */
 }

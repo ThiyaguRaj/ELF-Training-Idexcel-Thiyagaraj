@@ -2,8 +2,8 @@ body{
     background: black !important;
 }
 *{
-    margin: 0 !important;
-    padding: 0 !important;
+    /* margin: 0 !important;
+    padding: 0 !important; */
 }
 .heading{
     background: gray;
@@ -22,11 +22,33 @@ p{
     padding: 40px !important;
     line-height: 50px;
 }
-button{
+.about a button{
     margin-top: 50px !important;
     width: 200px;
     height: 60px;
     border-radius: 70px !important;
     font-weight: 700 !important;
     letter-spacing: 2px;
+}
+.hov a:hover{
+    color: rgb(39, 197, 197) !important;
+}
+.nav li a button{
+    height: 30px;
+    padding: 0 10px;
+    font-size: large;
+}
+.navbar-brand h4:hover{
+    transition: 2s all;
+    transform: rotate(-360deg);
+}
+.navbar-brand h4{
+    color: gray;
+}
+.nav li a{
+    margin-left: 20px;
+    font-size: large;
+}
+.logospan{
+    color: teal;
 }

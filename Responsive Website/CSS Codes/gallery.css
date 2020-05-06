@@ -5,8 +5,8 @@ body{
     padding: 0;
 }
 *{
-    margin: 0 !important;
-    padding: 0 !important;
+    /* margin: 0 !important;
+    padding: 0 !important; */
 }
 .headng{
     margin: 0;
@@ -42,7 +42,7 @@ img:hover{
     /* width: 500;
     height: 500; */
 }
-button{
+#end button{
     margin-top: 50px !important;
     margin-bottom: 50px !important;
     width: 200px;
@@ -51,4 +51,30 @@ button{
     font-weight: 600 !important;
     letter-spacing: 2px;
     font-size: x-large !important;
+}
+
+.hov a:hover{
+    color: rgb(39, 197, 197) !important;
+}
+.nav li a button{
+    height: 30px;
+    padding: 0 10px;
+    font-size: large;
+}
+.navbar-brand h4:hover{
+    transition: 2s all;
+    transform: rotate(-360deg);
+}
+.navbar-brand h4{
+    color: gray;
+}
+.nav li a{
+    margin-left: 20px;
+    font-size: large;
+}
+.logospan{
+    color: teal;
+}
+nav{
+    text-align: left !important;
 }

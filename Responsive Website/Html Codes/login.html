@@ -8,27 +8,46 @@
     <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container" style="margin-top: 200px;">
-        <div class="col-4 col-xs-4 col-md-4 col-lg-4 col-xl-4 offset-4 mt-5">
-        <form action="index.html">
-            <h1>Login</h1>
+    <div class="con-12 con-sm-12 con-md-12 con-lg-12 con-xl-12">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a href="/Html Codes/index.html" class="navbar-brand">
+                <h4 title="Home">T<span class="logospan">R</span></h4>
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav navbar-nav ml-auto mr-auto">
+                    <li class="nav-item active"><a href="/Html Codes/login.html" class="nav-link mr-5"><button
+                                class="btn btn-success">LOGIN</button></a></li>
+                    <li class="nav-item hov"><a href="/Html Codes/about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item hov"><a href="/Html Codes/gallery.html" class="nav-link">GALLERY</a></li>
+                    <li class="nav-item hov"><a href="/Html Codes/contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <form action="/Html Codes/index.html">
+            <legend>Login</legend>
+        
             <div class="form-group">
-                <input type="email" style="width: 100%" placeholder="Email">
+                <input type="email" class="form-control" id="" placeholder="Email">
             </div>
-            <div class="form-group";>
-                <input type="password" style="width: 100%" placeholder="Password">
+            <div class="form-group">
+                <input type="password" class="form-control" id="" placeholder="Password">
             </div>
-            <div>
-            <button class="btn btn-outline-success align-center" style="width: 100%;">Sign in</button>
+            <div class="form-group sign">
+                <button type="submit" class="btn btn-outline-success">Sign in</button>
             </div>
-            <div  style="text-align: center; margin-top: 20px;">
-            <a href="/HTML Codes/index.html"><button class="btn btn-outline-primary">Back</button></a>
-            </div>
+           <div class="form-group bak">
+            <a href="/HTML Codes/index.html"><button class="btn btn-outline-primary">back</button></a>
+           </div>
         </form>
-        </div>
     </div>
 
-    <script src="/js/jquery-3.5.0.js"></script>
-    <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
