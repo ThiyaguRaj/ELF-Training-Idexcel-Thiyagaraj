@@ -1,0 +1,109 @@
+Write a query to display the Version of postgres:
+	select version();
+Write a query to display list of all database:
+	 \l
+Write a query to Create a database:
+	create database testdb;
+Write a query to use a particular database:
+	\c testdb;
+Write a query to Clear screen:
+	\! cls
+Write a query to display all the tables inside the database:
+	\d
+Write a query to Create a table:
+	create table emp(id int,ename varchar(20));
+Write a query to display Table description:
+	\d person
+Write a query to Alter table:
+	alter table person add column age int;
+Write a query to Delete a column:
+	alter table person drop column age;
+Write a query to Change column name:
+	alter table person rename column current_name to new_name;
+Write a query to change table name:
+	alter table person rename to emp;
+Write a query to change database name:
+	alter database testdb rename to test; (for that we want to get out from that database.)
+Write a query to change database:
+	\c postgres;
+Write a query to drop a table:
+	drop table table_name;
+Write a query to Drop a database:
+	drop database database_name;
+
+DML :
+
+Write a query to Insert values into a table:
+	insert into table_name(column1,column2) values(value1,value2);
+				(or) 
+	insert into table_name values(value1,value2);
+
+Write a query to Update values in a table:
+	Update emp set sal=999.99;
+
+Write a query to Update values in a table with some condition:
+	update emp set sal=999.9 where id=7;
+
+Write a query to Delete all data in a table:
+	detete from idexcel_db;
+
+Write a query to Delete values in a table with condition:
+	delete from emp where id=8;
+
+DQL:
+
+Write a query to Select all data from a table:
+	Select * from employee;
+
+Write a query to select data from a table Where Condition:
+	Select * from emp where id=1;
+
+========Order of execution from-where-select==========
+
+
+
+
+Assignment:
+
+1. Select paricular column --> select name,id from employee;
+2. Insert more than one record in single query --> insert into emp values(1,'charlie'),(2,'jomon');
+______________________________________________________________________________________________________
+
+1. Write a Query to delete a record where employee id is 103.
+	delete from employee where id=103;
+
+2. Write a Query to display designation of all employees.
+	select designation from employee;
+
+ALIAS:
+
+
+2. Write a Query to display designation of all employees with column name as job_title.
+
+	select designation as job_title from employee;
+			(OR)
+	select designation job_title from employee;
+
+3. Write a Query to add some values and provide some alias name to identify them.
+
+	select (4+5) as Addition;
+
+4. Write a Query to obtain employee name with his current salery and salery with the 25% hike for all employees
+	
+	select ename,sal,sal+sal*1/4 as hiked_sal from employee;
+
+5. Write a Query to display all the record of the employee with incremented salery of 500 for each employee
+
+	select *,sal+500 as incremented_sal from employee;
+
+6. Write a Query  to display all the record of the employee with decremented salery of 500 for each employee
+
+	select *,sal-500 as decremented_sal from employee;
+
+7. Write a Query to display name, sal and annual sal of all the employee.
+
+	select ename,sal,sal*12 as annual_sal from employee;
+
+8. Write a Query to display per day salery of all the employee.
+
+	select sal/30 as sal_perday from employee;
