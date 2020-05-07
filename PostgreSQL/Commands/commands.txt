@@ -155,3 +155,37 @@ COMPARISION OPERATORS:
 	select * from employee where sal<>25000;
 
 LOGICAL OPERATOR:
+
+AND:
+
+1. Write a query to display all the record of the employee who is working as hr and having empid as 10.
+
+	select * from employee where designation='hr' and empid=10;
+
+2. Write a query to display all the record of the employee who is working as a salesman and hired after 2016.
+
+	select * from employee where designation='salesman' and hiredate>'2016-12-31';
+
+3. Write a query to display who is working as a hr in deptno 20 only if salery is greater than 25000.
+	
+	select * from employee where designation='hr' and deptno=20 and sal>24999;
+
+OR:
+
+1. Write a Query to display employee working in deptno 10,20.
+
+	select * from employee where deptno=10 or deptno=20; 
+
+2. Write a Query to display name, sal ,deptno who is working as tester or whose sal is equal to 20000.
+
+	select ename,sal,deptno from employee where designation='tester' or sal=25000;
+
+3. write a query to display name of all employees working as tester and in deptno 30 or clerk or sal greater than equal to 15000.
+
+	select ename from employee where (designation='tester' and deptno=30) or (designation='clerk' and sal>=15000);
+
+NOT:
+
+1. Write a Query to display all employees except those who are working in deptno 30.
+
+	select * from employee where not deptno=30;

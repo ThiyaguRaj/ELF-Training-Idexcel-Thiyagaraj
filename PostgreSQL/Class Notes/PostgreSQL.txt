@@ -221,3 +221,26 @@ COMPARISION OPERATORS:
 	Example:
 		select * from employee where deptno=10;
 LOGICAL OPERATOR:
+
+	
+	( AND,OR,NOT )
+
+	AND:
+		1. Whenever we want to satisfy multiple conditions we can use AND operator.
+		2. It will return true only if both the conditions return true.
+		3. If one of the them returns false the end result will be false.
+
+		Syntax --> select * from table_name where condition1 and condition2;
+		Example --> select * from employee where designation='hr' and deptno=20 and sal>24999;
+
+	OR:
+		1. It will return true if any of the condition returns true.
+		2. It wil return false if every condition returns false.
+
+		Syntax --> select * from table_name where condition1 or condition2;
+		Ex --> select * from employee where deptno=10 or deptno=20;
+	NOT:
+		1. It is used to negate the condition.
+
+		Syntax --> select * from t_name where not condition;
+		Example --> select * from employee where not deptno=30;
