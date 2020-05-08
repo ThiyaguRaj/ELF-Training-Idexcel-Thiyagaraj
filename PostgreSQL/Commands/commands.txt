@@ -189,3 +189,59 @@ NOT:
 1. Write a Query to display all employees except those who are working in deptno 30.
 
 	select * from employee where not deptno=30;
+
+_______________________________________________________________________________________________________________________________________________
+
+2. write a query to display all record of emp excluding hr who is working in deptno 30
+
+	select * from employee where not (designation='hr' and deptno=30);
+
+3. Write a query to display all employee who has hired after jan 2015 working as tester in dept 20 or display all emp who hired before 2015.
+
+	select * from employee where (hiredate>'2015-01-31' and designation='tester' and deptno=20) or hiredate<'2015-01-01';
+
+4. write a query to display all the record of the employee who is working in deptno 10,30,40,60
+
+	select * from employee where deptno=10 or deptno=30 or deptno=40 or deptno=50;
+	
+SPECIAL OPERATORS:
+
+IN:
+
+1. write a query to display all the record of the employee who is working in deptno 10,30,40,60.
+
+	select * from employee where deptno in(10,30,40,50);
+
+2. write a query to display all record of the employee who is working as salesman, manager, or admin.
+
+	select * from employee where designation in('salesman','manager','admin');
+
+NOT IN:
+
+1. Write a query to display all employees who are working in deptno 50,30,40 excluding salesman and hr
+
+	select * from employee where deptno in(50,30,40) and designation not in('salesman',hr');
+
+BETWEEN:
+
+1. write a query to display all the record of the employee whose salery range within 20000 to 40000
+
+	select * from employee where sal>=20000 and sal<=40000;
+			( OR )
+	select * from employee where sal between 20000 and 40000;
+
+2. Write a query to display all employee who are hired during 2014
+
+	select * from employee where hiredate between '2014-01-01' and '2014-12-31';
+
+3. Write a query to display ename, sal of all emp who are working deptno 10,20 and sal between 40000 to 50000;
+
+	select *,sal*12 as annual_sal from employee where deptno in (10,20) and sal*12 between 40000 and 50000;
+
+NOT BETWEEN:
+
+1. Write a query to display all record of employee excluding those who are hired in 2017.
+
+	select * from employee where hiredate not between '2017-01-01' and '2017-12-31';
+
+IS:

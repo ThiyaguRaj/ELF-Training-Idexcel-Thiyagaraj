@@ -244,3 +244,50 @@ LOGICAL OPERATOR:
 
 		Syntax --> select * from t_name where not condition;
 		Example --> select * from employee where not deptno=30;
+
+	Order Of Execution:
+		NOT, AND, OR
+
+SPECIAL OPERATORS:
+
+1. IN:
+	* The IN operator allows you to specify multiple values in a WHERE clause.
+	* The IN operator is a shorthand for multiple OR conditions.
+
+	Syntax --> select * from t_name where column_name in(val1,val2,...valn);
+	Example --> select * from employee where deptno in(10,30,40,50);
+
+2. NOT IN:
+	* The NOT IN operator is used when you want to retrieve a column that has no entries in the table or referencing table.
+
+	Syntax --> select * from t_name where column_name in(val1,val2,...valn);
+	Example --> select * from employee where deptno in(50,30,40) and designation not in('salesman',hr');
+
+3. BETWEEN:
+	
+	* The BETWEEN operator selects values within a given range.
+	* Begin and end values should be included.
+
+	Syntax --> select * from t_name where column_name between val1 and val2;
+	Example --> select * from employee where sal between 20000 and 40000;
+
+4. NOT BETWEEN:
+	* The SQL NOT BETWEEN operator is used for getting the values as part of result set which is outside of the range specified by the BETWEEN operator.
+
+	Syntax --> select * from t_name where column_name not between val1 and val2;
+	Example --> select * from employee where sal between '2019-01-01' and '2019-12-31';
+
+5. IS:
+	* IS operator is used to check whether a value is NULL.
+	* NULL means no value or missing value.
+	* The IS NULL returns TRUE if the expression is NULL , otherwise it returns FALSE.
+
+	Syntax --> select * from t_name where column_name is null;
+	Example --> select * from employee where sal is null;
+
+6. IS NOT:
+	* IS NOT operator is used to check whether a value is NOT NULL.
+	* The IS NOT NULL returns TRUE if the expression is NOT NULL , otherwise it returns FALSE.
+
+	Syntax --> select * from t_name where column_name is not null;
+	Example --> select * from employee where sal is not null;
