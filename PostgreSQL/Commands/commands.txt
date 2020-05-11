@@ -1,61 +1,61 @@
-Write a query to display the Version of postgres:
+1. Write a query to display the Version of postgres:
 	select version();
-Write a query to display list of all database:
+2. Write a query to display list of all database:
 	 \l
-Write a query to Create a database:
+3. Write a query to Create a database:
 	create database testdb;
-Write a query to use a particular database:
+4. Write a query to use a particular database:
 	\c testdb;
-Write a query to Clear screen:
+5. Write a query to Clear screen:
 	\! cls
-Write a query to display all the tables inside the database:
+6. Write a query to display all the tables inside the database:
 	\d
-Write a query to Create a table:
+7. Write a query to Create a table:
 	create table emp(id int,ename varchar(20));
-Write a query to display Table description:
+8. Write a query to display Table description:
 	\d person
-Write a query to Alter table:
+9. Write a query to Alter table:
 	alter table person add column age int;
-Write a query to Delete a column:
+10. Write a query to Delete a column:
 	alter table person drop column age;
-Write a query to Change column name:
+11. Write a query to Change column name:
 	alter table person rename column current_name to new_name;
-Write a query to change table name:
+12. Write a query to change table name:
 	alter table person rename to emp;
-Write a query to change database name:
+13. Write a query to change database name:
 	alter database testdb rename to test; (for that we want to get out from that database.)
-Write a query to change database:
+14. Write a query to change database:
 	\c postgres;
-Write a query to drop a table:
+15. Write a query to drop a table:
 	drop table table_name;
-Write a query to Drop a database:
+16. Write a query to Drop a database:
 	drop database database_name;
 
 DML :
 
-Write a query to Insert values into a table:
+1. Write a query to Insert values into a table:
 	insert into table_name(column1,column2) values(value1,value2);
 				(or) 
 	insert into table_name values(value1,value2);
 
-Write a query to Update values in a table:
+2. Write a query to Update values in a table:
 	Update emp set sal=999.99;
 
-Write a query to Update values in a table with some condition:
+3. Write a query to Update values in a table with some condition:
 	update emp set sal=999.9 where id=7;
 
-Write a query to Delete all data in a table:
+4. Write a query to Delete all data in a table:
 	detete from idexcel_db;
 
-Write a query to Delete values in a table with condition:
+5. Write a query to Delete values in a table with condition:
 	delete from emp where id=8;
 
 DQL:
 
-Write a query to Select all data from a table:
+1. Write a query to Select all data from a table:
 	Select * from employee;
 
-Write a query to select data from a table Where Condition:
+2. Write a query to select data from a table Where Condition:
 	Select * from emp where id=1;
 
 ========Order of execution from-where-select==========
@@ -245,3 +245,47 @@ NOT BETWEEN:
 	select * from employee where hiredate not between '2017-01-01' and '2017-12-31';
 
 IS:
+
+1. Write a query to display all record of employee whose deptno is null.
+
+	select * from employee where deptno is null;
+
+IS NOT:
+
+1. Write a query to display all record of employee whose deptno is not null;
+
+	select * from employee where deptno is not null;
+
+LIKE:
+
+1. Write a Query to find all record of employee whose name starts with 'R'.
+
+	select * from employee where ename like 'r%';
+
+2. Write a Query to find all record of employee whose name starts with 'R' and having only three character.
+
+	select * from employee where ename like 'r__';
+
+3. Write a Query to display all the record of the employee who has atleast two 'l' in  their names;
+
+	select * from employee where ename like '%l%l%';
+
+4. Write a query to display all record of employee and whose name starts with 's' and ends with 'p'.
+	
+	select * from employee where ename like 's%p';
+
+5. Write a query to display all the record of the employee whose name length in 5 and starts with 's' and 'l' should be second last character.
+
+	select * from employee where ename like 's__l_';
+
+6. Write a query to display all records of employee, if employee name begins with 's' or 'a'.
+
+	select * from employee where ename like 's%' or ename like 'a%';
+
+NOT LIKE:
+
+
+1. Write a query to display all records of employee excluding employee name begins with 'z' and 'p'.
+	
+	select * from employee where ename not like 'z%' or ename not like 'p%';
+

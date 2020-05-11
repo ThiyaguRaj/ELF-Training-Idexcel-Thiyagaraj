@@ -291,3 +291,28 @@ SPECIAL OPERATORS:
 
 	Syntax --> select * from t_name where column_name is not null;
 	Example --> select * from employee where sal is not null;
+
+CHARACTERS:
+	Characters are divided into two types.
+		1. Ordinary Characters
+		2. Special Characters
+	ORDINARY CHARACTERS:
+		1. Which is the combination of alphabets and numbers.
+		2. Which dont have any special functions.
+	SPECIAL CHARACTERS:
+		1. % and _ are the special characters used to make a pattern.
+		2. we can use like and not like operators to match the pattern.
+
+
+7. LIKE:
+	* It determines if a character string matches a specified pattern.
+
+	Syntax --> select * from t_name where col_name like '%_';
+	Example --> select * from employee where ename like 'r%';
+
+8. NOT LIKE:
+	* It is used to exclude those rows which are matching the pattern followed by LIKE operator.
+
+	Syntax --> select * from t_name where col_name not like '%_';
+	Example --> select * from employee where ename not like 'z%' or ename not like 'p%';
+
