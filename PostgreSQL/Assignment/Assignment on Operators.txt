@@ -1,0 +1,120 @@
+
+1) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL 
+
+	select * from employee where sal is null;
+
+2) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHO DON’T HAVE A DEPT NO
+
+	select * from employee where deptno is null;
+
+3) WRITE A QUERY TO LIST ALL THE SALESMEN IN DEPT 30
+
+	select * from employee where designation='salesman' and deptno=30;
+
+4) WRITE A QUERY TO LIST ALL THE SALESMEN IN DEPT NUMBER 30 AND HAVING SALARY GREATER THAN 1500
+
+	select * from employee where designation='salesman' and deptno=30 and sal>1500;
+
+5) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘S’ OR ‘A’
+
+	select * from employee where ename like 's%' or ename like 'a%';
+
+6) WRITE A QUERY TO LIST ALL THE EMPLOYEES EXCEPT THOSE WHO ARE WORKING IN DEPT 10 & 20. 
+
+	select * from employee where deptno not in(10,20);
+
+7) WRITE A QUERY TO LIST THE EMPLOYEES WHOSE NAME DOES NOT START WITH ‘S’
+
+	select * from employee where ename not like 's%';
+
+8) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10
+
+	select * from employee where reporting_manager is not null and deptno=10;
+	
+9) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL AND WORKING AS CLERK
+
+	select * from employee where sal is null and designation='clerk';
+
+10) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER IN DEPTNO 10 OR 30
+
+	select * from employee where reporting_manager is null and deptno in(10,30);
+
+11) WRITE A QUERY TO LIST ALL THE SALESMEN IN DEPT 30 WITH SAL MORE THAN 2450
+
+	select * from employee where designation='salesman' and deptno=30 and sal>2450;
+
+12) WRITE A QUERY TO LIST ALL THE ANALYST IN DEPT NUMBER 20 AND HAVING SALARY GREATER THAN 2500
+
+	select * from employee where designation='Analyst' and deptno=20 and sal>2500;
+
+13) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘M’ OR ‘J’
+
+	select * from employee where ename like 'm%' or ename like 'j%';
+
+14) WRITE A QUERY TO LIST ALL THE EMPLOYEES WITH ANNUAL SALARY EXCEPT THOSE WHO ARE WORKING IN DEPT 30 
+
+	select *,sal*12 as Annual_sal from employee where deptno<>30; 
+
+15) WRITE A QUERY TO LIST THE EMPLOYEES WHOSE NAME DOES NOT END WITH ‘ES’ OR ‘R’
+
+	select * from employee where ename not like '%es' and ename not like '%r';
+
+16) WRITE A QUERY TO LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY
+
+	select *,sal+sal/10 as Hiked_sal from employee where reporting_manager is not null and deptno=10;
+
+17) WRITE A QUERY TO DISPLAY ALL THE EMPLOYEE WHO ARE ‘SALESMAN’S HAVING ‘E’ AS THE LAST BUT ONE CHARACTER  IN ENAME BUT SALARY HAVING EXACTLY 4 CHARACTER
+
+	select * from employee where designation='salesman' and ename like '%e_' and cast(sal as varchar) like '____';
+
+18) WRITE A QUERY TO DISPLAY ALL THE EMPLOYEE WHO ARE JOINED AFTER YEAR 81
+
+	select * from employee where hiredate>'1981-12-31';
+
+19) WRITE A QUERY TO DISPLAY ALL THE EMPLOYEE WHO ARE JOINED IN FEB
+
+	select * from employee where cast(hiredate as varchar) like '____-02-__';
+
+20) WRITE A QUERY TO LIST THE EMPLOYEES WHO ARE NOT WORKING AS MANAGERS AND CLERKS IN DEPT 10 AND 20 WITH A SALARY IN THE RANGE OF 1000 TO 3000
+
+	select * from employee where designation not in('Manager','clerk') and deptno in(10,20) and (sal between 1000 and 3000);
+
+21) WRITE A QUERY TO LIST THE EMPLOYEES WHOSE SALARY NOT IN THE RANGE OF 1000 TO 2000 AND WORKING IN DEPT 10,20 OR 30 EXCEPT ALL SALESMEN
+
+	select * from employee where (sal not between 1000 and 2000) and deptno in(10,20,30) and designation<>'salesman';
+
+22) WRITE A QUERY TO LIST THE DEPARTMENT NAMES WHICH ARE HAVING LETTER ‘O’ IN THEIR LOCATIONS AS WELL AS THEIR DEPARTMENT NAMES
+
+	select dname from employee where location like '%o%' and dname like '%o%';
+
+23) WRITE A QUERY TO DISPLAY ALL THE EMPLOYEES WHOSE JOB HAS STRING ‘MAN’ IN IT.
+
+	select * from employee where designation like '%man%';
+
+24) WRITE A QUERY TO LIST THE EMPLOYEES WHO ARE HIRED AFTER 82 AND BEFORE 87.
+
+	select * from employee where hiredate between '1983-01-01' and '1986-12-31';
+
+25) WRITE A QUERY TO DISPLAY ALL THE DETAILS OF EMPLOYEES HIRED IN NOVEMBER AND DECEMBER.
+
+	select * from employee where cast(hiredate as varchar) like '____-11-__' or cast(hiredate as varchar) like '____-12-__';
+
+26) WRITE A QUERY TO LIST ALL THE EMPLOYEE NAMES AND COMISSION FOR THOSE EMPLOYEES WHO EARN COMISSION MORE THAN THEIR SALARY
+
+	select ename,comission from employee where comission>sal;
+
+27) WRITE A QUERY TO WAQTD NAME AND DESIGNATION FOR ALL THE EMPLOYEES HAVING REPORTING MANAGERS AND ALSO THRIE NAMES STARTING WITH ‘S’
+
+	select ename,designation from employee where reporting_manager like 's%';
+
+28) WRITE A QUERY TO WAQTD NAME AND SALARY OF ALL THE EMPLOYEES IF THEIR ANNUAL SALARY ENDS WITH ‘0’ .
+
+	selct name,sal from employee where cast(sal*12 as varchar) like '%0';
+
+29) WRITE A QUERY TO WAQTD NAME OF THE EMPLOYEE HAVING ATLEAST 2L’s IN HIS NAME .
+
+	select ename from employee where ename like '%l%l%';
+
+30) WRITE A QUERY TO WAQTD NAME OF THE EMPLOYEES WHOS NAME STARTS WITH A ‘VOWEL’
+
+	select ename from employee where ename like 'a%' or ename like 'e%' or ename like 'i%' or ename like 'o%' or ename like 'u%';
