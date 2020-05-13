@@ -316,3 +316,46 @@ CHARACTERS:
 	Syntax --> select * from t_name where col_name not like '%_';
 	Example --> select * from employee where ename not like 'z%' or ename not like 'p%';
 
+FUNCTIONS:
+	* Functions is a block of code used to perform a specific task.
+	* Divided into two types
+		a. Scalar Functions(single row functions)
+		b. Aggregate Functions(Multi row functions)
+
+Aggregate Functions:
+		-> It takes 'n' number of input and provides only one output.
+		-> Functions are
+			1. Avg()
+			2. Count()
+			3. Max()
+			4. Min()
+			5. Sum()
+
+1. AVG():
+	
+	Syntax-> select avg(col_name) from tablename;
+	Example -> select avg(sal) from employee;
+
+2. COUNT():
+	Syntax -> select count(*) from t_name;	
+	Example -> select count(*) from employee;
+
+3. MAX():
+	Syntax -> select max(c_name) from t_name;
+	Ex -> select max(sal) from employee;
+
+4. MIN():
+	Syntax -> select min(c_name) from t_name;
+	Ex -> select min(sal) from employee;
+
+5. SUM():
+	Syntax -> select sum(c_name) from t_name;
+	Ex -> select sum(sal) from employee;
+
+
+Scalar Functions:
+		-> It takes 'n' number of inputs and provides 'n' number of outputs.
+		-> It gives output per input.
+		-> Functions are
+
+			

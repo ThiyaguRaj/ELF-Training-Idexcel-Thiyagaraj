@@ -289,3 +289,40 @@ NOT LIKE:
 	
 	select * from employee where ename not like 'z%' or ename not like 'p%';
 
+AGGREGATE FUNCTIONS:
+
+AVG():
+
+1. write a query to display avg sal of all the employee.
+
+	select avg(sal) from employee;
+
+COUNT():
+
+2. write a query to count number of records
+
+	select count(*) from employee;
+
+MAX():
+
+3. Write a Query to get maximum sal from employee table.
+
+	select max(sal) from employee;
+
+MIN():
+
+4. Write a Query to get minimum sal from employee table.
+
+	select min(sal) from employee;
+
+SUM():
+
+5. Write a Query to get sum of all sal from employee table.
+
+	select sum(sal) from employee;
+
+6. Write a Query to get sum,avg,count,min and max salery from the employee table.
+
+	select sum(sal) salsum,max(sal) maxSal,min(sal) minSal,avg(sal) avgSal,count(sal) salCount from employee;
+
+_______________________________________________________________________________________________________________________________________________________________________
