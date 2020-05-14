@@ -326,3 +326,25 @@ SUM():
 	select sum(sal) salsum,max(sal) maxSal,min(sal) minSal,avg(sal) avgSal,count(sal) salCount from employee;
 
 _______________________________________________________________________________________________________________________________________________________________________
+
+ORDERBY:
+
+1. Write a Query to Display all record of employee according to sal should be desending order
+
+	select * from employee order by sal DESC;
+
+2. Write a query to display all the detail of employee and sort the record in descending order of hiredate, if there are more than one employee hired on the same date then the highest sal should be showed first.
+
+	select * from employee order by hiredate desc,sal desc;
+
+3. Write a query to display the name , sal and annual sal and sord record in ascending order of annual sal.
+
+	select ename, sal, sal*12 annual_sal from employee order by annual_sal asc;
+
+4. Write a query to display name, designation for all the employee who are working in either of dept 10,20,40 and sort the record in ascending order by their salery.
+
+	select ename, designation from employee where deptno in (10,20,40) order by sal;
+
+GROUPBY:
+
+1. 

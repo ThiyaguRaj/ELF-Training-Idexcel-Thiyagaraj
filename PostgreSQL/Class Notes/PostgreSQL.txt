@@ -352,10 +352,23 @@ Aggregate Functions:
 	Syntax -> select sum(c_name) from t_name;
 	Ex -> select sum(sal) from employee;
 
+CLAUSE:
+
+ORDERBY:
+	-> It is used to sort records in ascending or desending order.
+	-> By default records will sorted in ascending order if, nothing ASC/DESC is specified.
+	-> It always execute after select clause.
+	-> It sholud be always the last class to be written in the query.
+	-> If the groupby class is used with the orderby clause, we can use multi row function only for the column name or expression which is used by the groupby class while sorting.
+	-> In order by clause, we can use alias name.
+
+	Syntax -> select col1,col2/ * from tablename orderby colmn ASC|DESC.
+	EX -> select * from employee order by sal DESC;
+
 
 Scalar Functions:
 		-> It takes 'n' number of inputs and provides 'n' number of outputs.
 		-> It gives output per input.
-		-> Functions are
+		-> 
 
 			
