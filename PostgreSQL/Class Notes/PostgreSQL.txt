@@ -365,10 +365,32 @@ ORDERBY:
 	Syntax -> select col1,col2/ * from tablename orderby colmn ASC|DESC.
 	EX -> select * from employee order by sal DESC;
 
+GROUPBY:
+	-> It group rows that have the same values into summery rows.
+	-> It Often used with Aggregate functions.
+	-> It executes row by row.
+	-> After execution of group by clause records are grouped, therefore all the classes execute after execution of group by clause, will execute group by group.
+
+	Syntax -> select * from tablename where condition group by col_name;
+	EX -> select count(deptno) from employee group by deptno;
+	Order of Execution -> from-where-groupby-select
+
+HAVING:
+	-> It is used to filter the group on some condition.
+	-> It will always execute after execution of group by clause.
+	-> We cannot use having clause without group by clause.
+	-> We can use only column used in the group by clause.
+
+	Syntax -> select * from table_name 
+		  where(row filter condition)
+		  group by col_name 
+		  having(group filter condition);
+	Ex -> select deptno from employee where designation='clerk' group by deptno having count(*)>=2;
+	Order of Execution -> from-where-groupby-having-select
+
 
 Scalar Functions:
 		-> It takes 'n' number of inputs and provides 'n' number of outputs.
 		-> It gives output per input.
-		-> 
 
 			

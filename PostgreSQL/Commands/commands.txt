@@ -347,4 +347,18 @@ ORDERBY:
 
 GROUPBY:
 
-1. 
+1. Write a query to display number of count of the employee working in each dept
+
+	select count(deptno) from employee group by deptno;
+
+2. Write a Query to display the highest sal of employee in each department.
+	
+	select max(sal) from employee group by deptno;
+
+3. Write a Query to display number of tester working in each department.
+
+	select count(designation),deptno from employee where designation='tester' group by deptno;
+
+4. Write a Query to display the deptno which has atleast 2 clerk working.
+
+	select deptno from employee where designation='clerk' group by deptno having count(*)>=2;
