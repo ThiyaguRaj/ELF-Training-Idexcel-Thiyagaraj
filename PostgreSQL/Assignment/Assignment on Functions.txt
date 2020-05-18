@@ -1,0 +1,82 @@
+
+1. List employees whose name having 4 characters
+
+	select ename from employee where length(ename)=6;
+
+2. List employees whose job is having 7 characters
+
+	select location from employee where length(location)=7;
+	
+3. Find out how many times letter 'S' occurs in 'qspiders'
+
+	select count(*) from regexp_matches('qspiders','s','g'); 
+
+4. List the employees whose job is having last 3 characters as 'man'
+
+	select * from employee where substring(designation,length(designation)-2,length(designation))='man';
+
+5. List employees whose job is having first 3 characters as 'man'.
+
+	select * from employee where substring(ename,1,3)='man';
+
+6. Display all the names whose name is having exactly 1 'L'
+
+	select ename from employee where length(ename)=length(replace(ename,'l',''))=1;
+
+7. Display dept names which are having letter 'O'
+ 
+	select dname from employee where position('r' in dname)!=0;
+				(or)
+	select dname from employee where substring(dname,'o') is not null;
+
+8. Display the output as shown below,
+   Scott working as a clerk earns 3000 in dept 20
+
+	select concat(ename,' working as a ',designation,' earns ',sal,' in dept no ',deptno) from employee;
+
+9. Calculate number of L in string 'HELLLLL'
+
+	select count(*) from regexp_matches('HELLLLL','L','g'); 
+
+10. Display all the employees whose job has a string 'MAN'
+
+	select * from employee where position('er' in designation)!=0;
+
+11. Display all the employees whose job starts with string 'MAN'
+
+	select * from employee where substring(designation,1,3)='man';
+				(or)
+	select * from employee where left(designation,3)='man';
+
+12. Display all the employees whose job ends with string 'MAN'
+
+	select * from employee where right(designation,3)='man';
+				(or)
+	select * from employee where substring(designation,length(designation)-2,length(designation))='man';
+
+13. Display first 3 characters of ename in lower case and rest everything in upper case.
+    If ename is 'QSPIDERS' then display  this as ‘qspIDERS’
+
+	select concat(substring(ename,1,3),substring(upper(ename),4)) from employee;
+					( OR )
+	select concat(left(ename,3),substring(upper(ename),4)) from employee;
+
+14. Display the result from emp table as below.
+
+    SMITH is a CLERK and gets salary 2000 
+
+    Here SMITH is ename column, CLERK is JOB and 2000 is SAL column and rest everything is literal strings.
+
+	select concat(ename,' is a ',designation,' and gets salery ',sal) from employee;
+
+15. list the employees hired on a Wednesday
+
+	select * from emplpoyee where to_char(hiredate,'dy')='wed';
+
+16. list the employees hired on a leap year
+
+	`select * from employee where (cast(to_char(hiredate,'YYYY') as integer)%4=0 and cast(to_char(hiredate,'YYYY') as integer)%100<>0) or cast(to_char(hiredate,'YYYY') as integer)%400=0;
+
+17.list the employees hired on a Sunday in the month of may
+
+	select ename from employee where to_char(hiredate,'mon')='may' and to_char(hiredate,'dy')='sun';
