@@ -388,6 +388,18 @@ HAVING:
 	Ex -> select deptno from employee where designation='clerk' group by deptno having count(*)>=2;
 	Order of Execution -> from-where-groupby-having-select
 
+SUBQUERY:
+
+	-> A Query written inside another Query is known as SubQuery.
+	-> It is also known as 'Inner Query'  or 'Nested Query'.
+	-> It is an alternative way of returning  data from multiple tables.
+	-> SubQueries must be enclosed with in parenthesis.
+	-> They are classified into
+		1. Single Row Subquery
+		2. Multi Row Subquery
+	Syntax -> select * from t_name where c_name=(select c_name from t_name);
+
+
 
 Scalar Functions:
 		-> It takes 'n' number of inputs and provides 'n' number of outputs.

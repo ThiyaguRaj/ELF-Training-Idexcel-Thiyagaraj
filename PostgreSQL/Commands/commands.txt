@@ -359,6 +359,21 @@ GROUPBY:
 
 	select count(designation),deptno from employee where designation='tester' group by deptno;
 
-4. Write a Query to display the deptno which has atleast 2 clerk working.
+HAVING:
+
+1. Write a Query to display the deptno which has atleast 2 clerk working.
 
 	select deptno from employee where designation='clerk' group by deptno having count(*)>=2;
+
+2. Write a Query to display dept no which has total sal greater than 10000 in each dept.
+
+	select deptno from employee group by deptno having sum(sal)>10000;
+
+3. Write a Query to display deptno which has atleast 2 employee hired into it on the same date.
+
+	select deptno from employee group by deptno,hiredate having count(*)>1
+
+4. write a Query to display deptno and avg sal of all the departments whose avg sal is greater than 15000 by excluding the employee whose names begins with 'r';
+
+	select deptno,avg(sal) from employee where ename not like 'r%' group by deptno having avg(sal)>15000;
+
