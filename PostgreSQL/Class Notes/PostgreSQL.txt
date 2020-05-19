@@ -381,6 +381,7 @@ HAVING:
 	-> We cannot use having clause without group by clause.
 	-> We can use only column used in the group by clause.
 
+ 
 	Syntax -> select * from table_name 
 		  where(row filter condition)
 		  group by col_name 
@@ -391,13 +392,39 @@ HAVING:
 SUBQUERY:
 
 	-> A Query written inside another Query is known as SubQuery.
+	-> A Query written written within the parenthesis is known as subquery or InnerQuery.
+	-> Query which is written outside parenthesis is known as outer Query.
 	-> It is also known as 'Inner Query'  or 'Nested Query'.
 	-> It is an alternative way of returning  data from multiple tables.
 	-> SubQueries must be enclosed with in parenthesis.
+	
+	Uses:
+	1. Whenever we dont know exact values, we can use subquery to fetch those values.
+	2. 
+	
+	ORDER OF EXECUTION:
+	1. First Inner Query will execute.
+	2. The output of inner query will be treated as the input for outere Query.
+	3. Then the outer Query will execute and provide result set.
+
+	Syntax -> select * from t_name where c_name operator (select c_name from t_name);
+	
 	-> They are classified into
 		1. Single Row Subquery
 		2. Multi Row Subquery
-	Syntax -> select * from t_name where c_name=(select c_name from t_name);
+
+		Single Row SubQuery:
+		-> It must and should return a single record.
+		-> If the single value operators such as ( =,>,< ) are used, We call it as single Row SubQuery.
+		-> The inner Query shold return only one value.
+			Syntax -> select * from t_name where c_name Arithmetic operator | Compatision operator (select c_name from t_name);
+			EX -> select * from emp where dname=(select dname from d_info);
+
+		Multi Row SubQuery:
+		-> It the operator such as multi value operator(IN) are used, We can call it as Multi Row Subquery.
+		-> It can return one or more number of rows.
+			Syntax -> select * from t_name where c_name Special operator (select c_name1,c_name2,.. from t_name);
+			EX -> select * from emp where dname in (select dname from d_info);		
 
 
 
