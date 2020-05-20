@@ -12,7 +12,7 @@ APPLICATION:
 
 DBMS:
 	1. DBMS stands for Database management System.
-	2. The DBMS manages incoming data, organizes it, and provides ways for the data to be modified or extracted by users or other programs.
+	2. The DBMS manages incoming data, organizes it, and provides ways for the data to be modified or extracted by users or othe r programs.
 	3. Some DBMS examples include MySQL, PostgreSQL, Microsoft Access, SQL Server, FileMaker, Oracle.
 
 TYPES OF DBMS:
@@ -109,6 +109,7 @@ ORDBMS:
 		a] ORDBMS -> RDBMS + ODBMS
 		b] In ORDBMS, we can have our own datatypes.
 
+
 	POSTGRES (or) POSTGRESQL:
 		a] It is an open source object oriented Database.
 		b] It is the worlds most advanced open source RDBMS.
@@ -171,17 +172,19 @@ DML:
 DQL:
 
 	Select Clause:
+
+		Syntax --> select */Distinct column_name/Expression/alias from table_name;
+		Example --> select * from student;
+
 			There are three different ways to retrive data from the table.
 
-		1. Projection:
-			Selecting a column.
-		2. Selection:
+		1. Selection:
 			Slecting both rows and columns.
+		2. Projection:
+			Selecting a column.
 		3. Join:
 			Retrieving data from multiple tables at same time.
 
-			Syntax --> select */Distinct column_name/Expression/alias from table_name;
-			Example --> select * from student;
 
 			* --> Helps us to retrieve all the data present in the table.
 			Order of Execution --> From - Select.
@@ -208,7 +211,7 @@ Expressions:
 DISTINCT:
 	1. Used to remove duplicate rows from a table
 		a. if, we are passing single argument with distinct, it will remove duplicate values.
-		b. if, we use two column name with distinct keyword, the it will remove duplicates with combination of columns
+		b. if, we use two column name with distinct keyword, then it will remove duplicates with combination of columns
 
 	Syntax --> Select distinct col_name from table_name;
 	Example --> Select distinct ename from employee;
@@ -319,10 +322,10 @@ CHARACTERS:
 FUNCTIONS:
 	* Functions is a block of code used to perform a specific task.
 	* Divided into two types
-		a. Scalar Functions(single row functions)
-		b. Aggregate Functions(Multi row functions)
+		a. Aggregate Functions(Multi row functions)
+		b. Scalar Functions(single row functions)
 
-Aggregate Functions:
+Aggregate Functions(Multi row functions):
 		-> It takes 'n' number of input and provides only one output.
 		-> Functions are
 			1. Avg()
@@ -352,6 +355,10 @@ Aggregate Functions:
 	Syntax -> select sum(c_name) from t_name;
 	Ex -> select sum(sal) from employee;
 
+Scalar Functions:
+	-> It takes 'n' number of inputs and provides 'n' number of outputs.
+	-> It gives output per input.
+
 CLAUSE:
 
 ORDERBY:
@@ -366,10 +373,10 @@ ORDERBY:
 	EX -> select * from employee order by sal DESC;
 
 GROUPBY:
-	-> It group rows that have the same values into summery rows.
+	-> It group rows that have the same values into summary rows.
 	-> It Often used with Aggregate functions.
 	-> It executes row by row.
-	-> After execution of group by clause records are grouped, therefore all the classes execute after execution of group by clause, will execute group by group.
+	-> After execution of group by clause the records will be grouped, therefore all the classes execute after execution of group by clause, will execute group by group.
 
 	Syntax -> select * from tablename where condition group by col_name;
 	EX -> select count(deptno) from employee group by deptno;
@@ -400,11 +407,11 @@ SUBQUERY:
 	
 	Uses:
 	1. Whenever we dont know exact values, we can use subquery to fetch those values.
-	2. 
+	2. We can also retrieve data from multiple tables by using SubQuery.
 	
 	ORDER OF EXECUTION:
 	1. First Inner Query will execute.
-	2. The output of inner query will be treated as the input for outere Query.
+	2. The output of inner query will be treated as the input for outer Query.
 	3. Then the outer Query will execute and provide result set.
 
 	Syntax -> select * from t_name where c_name operator (select c_name from t_name);
@@ -421,15 +428,8 @@ SUBQUERY:
 			EX -> select * from emp where dname=(select dname from d_info);
 
 		Multi Row SubQuery:
-		-> It the operator such as multi value operator(IN) are used, We can call it as Multi Row Subquery.
+		-> If the operator such as multi value operator(IN) are used, We can call it as Multi Row Subquery.
 		-> It can return one or more number of rows.
 			Syntax -> select * from t_name where c_name Special operator (select c_name1,c_name2,.. from t_name);
-			EX -> select * from emp where dname in (select dname from d_info);		
+			EX -> select * from emp where dname in (select dname from d_info);
 
-
-
-Scalar Functions:
-		-> It takes 'n' number of inputs and provides 'n' number of outputs.
-		-> It gives output per input.
-
-			

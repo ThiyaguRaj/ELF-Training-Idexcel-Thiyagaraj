@@ -377,3 +377,27 @@ HAVING:
 
 	select deptno,avg(sal) from employee where ename not like 'r%' group by deptno having avg(sal)>15000;
 
+SUBQUERIES:
+
+1.Write a query to display name of all the employees who were hired after 'jomon'.
+
+	select ename from employee where hiredate>(select hiredate from employee where ename='ram');
+
+2. Write a Query to display name of all employee who is working for research dept.
+
+	select ename from employee where deptno=(select deptno from department_info where dname='research');
+
+3. Write a Query to display name of employee who is working in location which has atleast one 'a' in its name.
+
+	select ename from employee where deptno in (select deptno from department_info where location like'%a%');
+
+4. WAQTD second maximum sal
+
+	select max(sal) from employee where sal<(select max(sal) from employee);
+
+5. WAQTD dept name which has atleast two 'clerk'
+
+6. WAQTD the third maximum salery.
+
+7. WAQTD name of the employee whose were hired before 'justy' and their sal is greater than 'viji'.
+
