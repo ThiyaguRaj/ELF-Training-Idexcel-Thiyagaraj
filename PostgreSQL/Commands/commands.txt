@@ -406,3 +406,4 @@ SUBQUERIES:
 7. WAQTD name of the employee whose were hired before 'justy' and their sal is greater than 'viji'.
 
 	select ename from employee where hiredate<(select hiredate from employee where ename='justy') and sal>(select sal from employee where ename='viji');
+

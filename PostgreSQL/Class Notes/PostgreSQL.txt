@@ -433,3 +433,15 @@ SUBQUERY:
 			Syntax -> select * from t_name where c_name Special operator (select c_name1,c_name2,.. from t_name);
 			EX -> select * from emp where dname in (select dname from d_info);
 
+JOINS:
+
+	-> Join is used to fetch the data from two or more tables.
+	-> Minimum required condition for joining table is, at least number of tables should be two.
+	-> JOIN keyword is used to join multiple tables.
+
+	TYPES OF JOIN:
+	1. Cross join
+	2. Outer Join
+	3. Inner join
+	4. Self Join
+	5. Natural Join.
