@@ -445,3 +445,31 @@ JOINS:
 	3. Inner join
 	4. Self Join
 	5. Natural Join.
+
+	1.Cross Join(cartesion Join):
+		-> A cross join will merge every rows present in one table with every rows present in another table.
+		-> It is also known as the Cartesian join since it returns the Cartesian product of the sets of rows from the joined tables.
+	
+		Syntax -> select */c_name from table1 cross join table2;
+		Ex: -> select * from employee cross join department_info;
+
+	2.Inner Join:
+		-> It returns matched(common) record from multiple tables.
+		-> Joining common records from two tables with the use of join condition is known as inner join.
+
+		Syntax -> select */col_name from table1 inner join table2 on join condition.
+		Example -> select * from employee inner join department_info on employee.deptno=department_info.deptno;
+
+	3. Outer Join:
+		-> 
+
+ANY OPERATOR:
+
+	-> It is a set comparision operator, used to compare set of values.
+	-> The ANY operator returns true if any value of the subquery meets the condition, otherwise, it returns false.
+	-> The ANY operator must be preceded by any of the following comparison operator =, <=, >, <, > and <>.
+	-> It should be used only with where and having clause.
+	-> The subquery must return exactly one column.
+	-> It returns true if any of the subquery values meet a certain condition.
+
+	Ex-> select * from employee where ename=any(select ename from employee where deptno=20);

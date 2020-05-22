@@ -407,3 +407,19 @@ SUBQUERIES:
 
 	select ename from employee where hiredate<(select hiredate from employee where ename='justy') and sal>(select sal from employee where ename='viji');
 
+INER JOIN:
+
+1. WAQTD dname, location of all the employees whose sal >= 40000.
+
+	select dname,location from department_info d inner join employee e on d.deptno=e.deptno and sal>=40000;
+
+2. WAQTD employee name and all the detail of the department if employee were hiredate after 2015 and working in delhi or banglore.
+
+	select * from employee e inner join department_info d on e.deptno=d.deptno and hiredate>'2015-12-31' and location in('delhi','banglore');
+
+3. WAQTD ename,dname if the ename starts with 's' or 'p' and their dname has atleast one 'e' in it.
+
+	select ename,dname from employee e inner join department_info d on e.deptno=d.deptno and (ename like 's%' or ename like 'p%') and dname like '%e%';
+
+
+
