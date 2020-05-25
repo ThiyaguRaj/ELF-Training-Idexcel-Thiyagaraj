@@ -1,3 +1,4 @@
+
 DATA:
 	A Data is a Raw fact which defines the attribute of an entity.
 
@@ -455,13 +456,29 @@ JOINS:
 
 	2.Inner Join:
 		-> It returns matched(common) record from multiple tables.
-		-> Joining common records from two tables with the use of join condition is known as inner join.
+		-> Retrieving common records from two tables with the use of join condition is known as inner join.
 
 		Syntax -> select */col_name from table1 inner join table2 on join condition.
 		Example -> select * from employee inner join department_info on employee.deptno=department_info.deptno;
 
 	3. Outer Join:
-		-> 
+		-> Left Outer Join
+		-> Right Outer Join
+		-> Full Outer5 Join
+
+		Left Outer Join:
+		-> It gives us the inner join and the unmatched  records from the left table.
+		-> Otherwise, It will give the matched and unmatched records from the left table.
+		
+		Syntax -> select */C-name from table1 left outer join table2 on join condition;
+		Example -> select * from employee e left outer join dept_info d on e.deptno=d.deptno;
+
+		RIGHT OUTTER JOIN:
+		-> It gives us the inner join and the unmatched  records from the right table.
+		-> Otherwise, It will give the matched and unmatched records from the right table.
+
+		Syntax -> select */C-name from table1 right outer join table2 on join condition;
+		Example -> select * from employee e right outer join dept_info d on e.deptno=d.deptno;
 
 ANY OPERATOR:
 
