@@ -422,4 +422,16 @@ INER JOIN:
 	select ename,dname from employee e inner join department_info d on e.deptno=d.deptno and (ename like 's%' or ename like 'p%') and dname like '%e%';
 
 
+OUTER JOIN:
 
+1. WAQTD a dept name which do not have employee working in it.
+
+	select dname from department_info d left outer join employee e on d.deptno=e.deptno where empid is null;
+
+2. WAQT get ename who is not working for any dept.
+
+	select ename from employee e left outer join department_info d on e.deptno=d.deptno where e.deptno is null;
+
+NATURAL JOIN:
+
+1. 

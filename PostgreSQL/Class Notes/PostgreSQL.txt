@@ -462,23 +462,42 @@ JOINS:
 		Example -> select * from employee inner join department_info on employee.deptno=department_info.deptno;
 
 	3. Outer Join:
+			If we need unmatched records, then we can go for outer join.
 		-> Left Outer Join
 		-> Right Outer Join
-		-> Full Outer5 Join
+		-> Full Outer Join
 
-		Left Outer Join:
+		LEFT OUTER JOIN:
 		-> It gives us the inner join and the unmatched  records from the left table.
 		-> Otherwise, It will give the matched and unmatched records from the left table.
 		
 		Syntax -> select */C-name from table1 left outer join table2 on join condition;
 		Example -> select * from employee e left outer join dept_info d on e.deptno=d.deptno;
 
-		RIGHT OUTTER JOIN:
+		RIGHT OUTER JOIN:
 		-> It gives us the inner join and the unmatched  records from the right table.
 		-> Otherwise, It will give the matched and unmatched records from the right table.
 
 		Syntax -> select */C-name from table1 right outer join table2 on join condition;
 		Example -> select * from employee e right outer join dept_info d on e.deptno=d.deptno;
+
+		FULL OUTER JOIN:
+		-> It gives the inner join and both the matched and unmatched records from both tables.
+		-> It is the combination of both left and right outer join.
+
+		Syntax -> select */C-name from table1 full outer join table2 on join condition;
+		Example -> select * from employee e full outer join dept_info d on e.deptno=d.deptno;
+
+	4. Natural Join:
+		-> we dont need to pass ant condition.
+		-> It will give common records present in both tables like inner join, when common record is present in both the tables.
+		-> If, no common records found, it will gives cartesian join.
+
+		Syntax -> select */c_name from table1 natural join table2;
+		EX -> select ename from employee inner join dept_info;
+	5. Self Join:
+		-> 
+
 
 ANY OPERATOR:
 
