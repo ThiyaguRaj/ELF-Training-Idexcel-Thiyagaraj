@@ -360,6 +360,30 @@ Scalar Functions:
 	-> It takes 'n' number of inputs and provides 'n' number of outputs.
 	-> It gives output per input.
 
+	1. CHARACTER SINGLE ROW FUNCTION:
+		 i) Case
+			1. Upper() -> Convert lower case to upper case
+				eg - select upper(ename) from employee;
+			2. Lower() -> Convert upper case to lower case
+				eg - select lower(ename) from employee;
+			3. initcap() -> conerts first letter to upper case and every other words to lower case.
+				eg - select initcap(ename) from employee;
+		ii) Character
+			1. length()
+				eg - select length(ename) from employee;
+			2. concat()
+				eg - 
+			3. reverse()
+				eg - 
+			4. replace()
+				eg - 
+			5. substr()
+				eg - 
+			6. instr()
+				eg - 
+			7. trim()
+				eg - 
+
 CLAUSE:
 
 ORDERBY:
@@ -496,8 +520,20 @@ JOINS:
 		Syntax -> select */c_name from table1 natural join table2;
 		EX -> select ename from employee inner join dept_info;
 	5. Self Join:
-		-> 
+		-> Joining single table using alias name.
+		-> Merging of same table.
+		-> Only one table will be there in the self join.
+		
+		Syntax -> select */c_name from table_name alias_name self  join table_name alias2 on join_condition.
+		
 
+TRUNCATE:
+	-> It will delete the entire data permanently, but table name will not be deleted.
+	-> We cannot use where class in truncate operation.
+
+DELETE:
+	-> It will delete the entire data but, we can roll back the operation.
+	-> We can use where class in delete operation.
 
 ANY OPERATOR:
 
