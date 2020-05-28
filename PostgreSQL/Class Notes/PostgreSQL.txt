@@ -370,20 +370,50 @@ Scalar Functions:
 				eg - select initcap(ename) from employee;
 		ii) Character
 			1. length()
+				Syntax - select length(c_name) from t_name;
 				eg - select length(ename) from employee;
 			2. concat()
-				eg - 
+				Syntax - select concat(c_name1,c_name2) from t_name;
+				eg - select concat(ename,' + ',mgr) from employee;
 			3. reverse()
-				eg - 
+				Syntax - select reverse(c_name) from t_name;
+				eg - select reverse(ename) from employee; 
 			4. replace()
-				eg - 
+				Syntax - select replace('string','char1','char2') from tablename
+				eg - select replace('tyagu','y','i') from tablename;
 			5. substr()
-				eg - 
-			6. instr()
-				eg - 
-			7. trim()
-				eg - 
+				Syntax - select substr(string,position,length) from tablename;
+				eg - select substr(ename,1,2) from employee;
+						(OR)
+					select substr(ename,4) from employee;
 
+				Note - length is optional in substr.
+			6. Position()
+				-> Used to find the record is present in which index
+
+				Syntax - select  position('search string' in 'main string') from t_name;
+				eg - select position('i' in ename) from employee;
+					select position('Sql' in 'postgeSql') from employee;
+			7. trim()
+				Syntax - select trim([leading/trailing/both] <remove string> from <main string>)
+				eg:
+					Leading - select trim(leading 'm' from 'madam');
+					Trailing - select trim(trailing 'm' from 'madam');
+					Both - select trim('m' from 'madam') (OR) select trim(both 'm' from 'madam');
+
+					Note: 'Both' is optional.
+	2. NUMBER SINGLE ROW FUNCTION:
+		1. mod()
+			-> Used to get modules
+	
+			Syntax - select mod(divident,divisor);
+			ex - select mod(10,3);
+		2. Power()
+			Syntax - select power(value,power);
+			ex - select power(3,2);
+		3. Round()
+		4. abs()
+		5. 
 CLAUSE:
 
 ORDERBY:
