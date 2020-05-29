@@ -412,8 +412,94 @@ Scalar Functions:
 			Syntax - select power(value,power);
 			ex - select power(3,2);
 		3. Round()
+			-> It will round the given number to neareset whole number.
+			Without Scale:
+			CASE 1:
+
+			Syntax - select round(number);
+			ex - select round(6782.4); ----> 6782
+
+			With Scale:
+				CASE 2:
+				Positive Scale:
+
+				Syntax - select round(number,[scale]);
+				ex - select round(6782.437,2); ----> 6782.44
+
+				CASE 3:
+				Negative Scale:
+		
+				Syntax - select round(number,[negative scale]);
+				ex - select round(6722.345,-2);
+			
 		4. abs()
-		5. 
+			-> It will return a positive value.
+
+			Syntax - select abs(value)
+			ex - select abs(-122)  ----- output-> 122
+
+		5. sqrt()
+	
+		6. trunce()
+			-> It will eliminate the decimal value and always gives the lowest whole value
+		
+			Syntax -> select trunce(number)
+			eg -> select trunce(56.6) -> 56
+
+	3. DATE AND TIME SINGLE ROW FUNCTION:
+		1. current_date:
+			-> It will display current date
+
+			syntax -> select current_date;
+					(OR)
+				select now()::date;
+
+		2. Current_time:
+			Syntax -> select current_time;
+					(OR)
+				select now()::time;
+
+		3. Both date and time:
+			Syntax -> select clock_timestamp();
+					(OR)
+				select now();
+
+		4. Age()
+			-> used to calculate age.
+
+			Calculate Age:
+			Syntax -> select age(timestamp 'current date',timestamp 'date of birth');
+			eg -> select age(timestamp '2020-05-29',timestamp '1998-04-14');
+
+			Calculate Century:
+			Syntax -> select extract(century from timestamp '2020-05-29');
+
+			Calculate Decade:
+			Syntax -> select extract(decade from timestamp '2020-05-29');
+
+			Calculate day:
+			Syntax -> select extract(day from timestamp '2020-05-29');
+
+			Calculate which day it is in a week:
+			Syntrax -> select extract(dow from timestamp '2020-05-29'); { it will provide a number from (0 to 6) indicates (sunday to saturday) }
+			dow -> day of the week
+			
+			Calculate which day it is in a week:
+			Syntrax -> select extract(doy from timestamp '2020-05-29');
+			doy -> day of the year
+
+			Calculate which week it is in a year:
+			Syntrax -> select extract(week from timestamp '2020-05-29');
+
+			Calculate which month it is in a year:
+			Syntrax -> select extract(month from timestamp '2020-05-29');
+
+			Calculate hours:
+			Syntax -> select extract(hours from timestamp '2020-05-29 13:13:13');
+
+			Calculate minute:
+			Syntax -> select extract(min from timestamp '2020-05-29 13:13:13');
+
 CLAUSE:
 
 ORDERBY:

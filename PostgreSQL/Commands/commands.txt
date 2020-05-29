@@ -33,29 +33,29 @@
 
 DML :
 
-1. Write a query to Insert values into a table:
+17. Write a query to Insert values into a table:
 	insert into table_name(column1,column2) values(value1,value2);
 				(or) 
 	insert into table_name values(value1,value2);
 
-2. Write a query to Update values in a table:
+18. Write a query to Update values in a table:
 	Update emp set sal=999.99;
 
-3. Write a query to Update values in a table with some condition:
+19. Write a query to Update values in a table with some condition:
 	update emp set sal=999.9 where id=7;
 
-4. Write a query to Delete all data in a table:
+20. Write a query to Delete all data in a table:
 	detete from idexcel_db;
 
-5. Write a query to Delete values in a table with condition:
+21. Write a query to Delete values in a table with condition:
 	delete from emp where id=8;
 
 DQL:
 
-1. Write a query to Select all data from a table:
+22. Write a query to Select all data from a table:
 	Select * from employee;
 
-2. Write a query to select data from a table Where Condition:
+23. Write a query to select data from a table Where Condition:
 	Select * from emp where id=1;
 
 ========Order of execution from-where-select==========
@@ -69,42 +69,42 @@ Assignment:
 2. Insert more than one record in single query --> insert into emp values(1,'charlie'),(2,'jomon');
 ______________________________________________________________________________________________________
 
-1. Write a Query to delete a record where employee id is 103.
+24. Write a Query to delete a record where employee id is 103.
 	delete from employee where id=103;
 
-2. Write a Query to display designation of all employees.
+25. Write a Query to display designation of all employees.
 	select designation from employee;
 
 ALIAS:
 
 
-2. Write a Query to display designation of all employees with column name as job_title.
+26. Write a Query to display designation of all employees with column name as job_title.
 
 	select designation as job_title from employee;
 			(OR)
 	select designation job_title from employee;
 
-3. Write a Query to add some values and provide some alias name to identify them.
+27. Write a Query to add some values and provide some alias name to identify them.
 
 	select (4+5) as Addition;
 
-4. Write a Query to obtain employee name with his current salery and salery with the 25% hike for all employees
+28. Write a Query to obtain employee name with his current salery and salery with the 25% hike for all employees
 	
 	select ename,sal,sal+sal*1/4 as hiked_sal from employee;
 
-5. Write a Query to display all the record of the employee with incremented salery of 500 for each employee
+29. Write a Query to display all the record of the employee with incremented salery of 500 for each employee
 
 	select *,sal+500 as incremented_sal from employee;
 
-6. Write a Query  to display all the record of the employee with decremented salery of 500 for each employee
+30. Write a Query  to display all the record of the employee with decremented salery of 500 for each employee
 
 	select *,sal-500 as decremented_sal from employee;
 
-7. Write a Query to display name, sal and annual sal of all the employee.
+31. Write a Query to display name, sal and annual sal of all the employee.
 
 	select ename,sal,sal*12 as annual_sal from employee;
 
-8. Write a Query to display per day salery of all the employee.
+32. Write a Query to display per day salery of all the employee.
 
 	select sal/30 as sal_perday from employee;
 
@@ -116,11 +116,11 @@ DISTINCT:
 		1. if, we are passing single argument with distinct, it will remove duplicate values.
 		2. if, we use two column name with distinct keyword, the it will remove duplicates with combination of columns
 
-1. Write a query to display distinct name from employee table
+33. Write a query to display distinct name from employee table
 	
 	select distinct ename from employee;
 
-2. Write a query to display multiple column with distinct keyword
+34. Write a query to display multiple column with distinct keyword
 
 	select distinct sal,ename,designation from employee;
 
@@ -128,27 +128,27 @@ ________________________________________________________________________________
 
 COMPARISION OPERATORS:
 
-1. Write a query to display sal of emp is equal to 25,000
+35. Write a query to display sal of emp is equal to 25,000
 
 	select sal from employee where sal=25,000;
 
-2. Write a query to display all records of employee who are getting sal greater than 25000
+36. Write a query to display all records of employee who are getting sal greater than 25000
 
 	select * from employee where sal>25000;
 
-3. Write a query to display all records of employee who are getting sal greater than or equal to 25000
+37. Write a query to display all records of employee who are getting sal greater than or equal to 25000
 
 	select * from employee where sal>=25000;	
 
-4. Write a Querty to display all records of employee who are getting sal less than 25000
+38. Write a Querty to display all records of employee who are getting sal less than 25000
 
 	select * from employee where sal<25000;
 
-5. Write a Querty to display all records of employee who are getting sal less than or equal to 25000
+39. Write a Querty to display all records of employee who are getting sal less than or equal to 25000
 
 	select * from employee where sal<=25000;
 
-6. Write a Querty to display all records of employee who are getting sal other than 25000
+40. Write a Querty to display all records of employee who are getting sal other than 25000
 
 	select * from employee where sal!=25000;
 			(OR)
@@ -158,49 +158,49 @@ LOGICAL OPERATOR:
 
 AND:
 
-1. Write a query to display all the record of the employee who is working as hr and having empid as 10.
+41. Write a query to display all the record of the employee who is working as hr and having empid as 10.
 
 	select * from employee where designation='hr' and empid=10;
 
-2. Write a query to display all the record of the employee who is working as a salesman and hired after 2016.
+42. Write a query to display all the record of the employee who is working as a salesman and hired after 2016.
 
 	select * from employee where designation='salesman' and hiredate>'2016-12-31';
 
-3. Write a query to display who is working as a hr in deptno 20 only if salery is greater than 25000.
+43. Write a query to display who is working as a hr in deptno 20 only if salery is greater than 25000.
 	
 	select * from employee where designation='hr' and deptno=20 and sal>24999;
 
 OR:
 
-1. Write a Query to display employee working in deptno 10,20.
+44. Write a Query to display employee working in deptno 10,20.
 
 	select * from employee where deptno=10 or deptno=20; 
 
-2. Write a Query to display name, sal ,deptno who is working as tester or whose sal is equal to 20000.
+45. Write a Query to display name, sal ,deptno who is working as tester or whose sal is equal to 20000.
 
 	select ename,sal,deptno from employee where designation='tester' or sal=25000;
 
-3. write a query to display name of all employees working as tester and in deptno 30 or clerk or sal greater than equal to 15000.
+46. write a query to display name of all employees working as tester and in deptno 30 or clerk or sal greater than equal to 15000.
 
 	select ename from employee where (designation='tester' and deptno=30) or (designation='clerk' and sal>=15000);
 
 NOT:
 
-1. Write a Query to display all employees except those who are working in deptno 30.
+47. Write a Query to display all employees except those who are working in deptno 30.
 
 	select * from employee where not deptno=30;
 
 _______________________________________________________________________________________________________________________________________________
 
-2. write a query to display all record of emp excluding hr who is working in deptno 30
+48. write a query to display all record of emp excluding hr who is working in deptno 30
 
 	select * from employee where not (designation='hr' and deptno=30);
 
-3. Write a query to display all employee who has hired after jan 2015 working as tester in dept 20 or display all emp who hired before 2015.
+49. Write a query to display all employee who has hired after jan 2015 working as tester in dept 20 or display all emp who hired before 2015.
 
 	select * from employee where (hiredate>'2015-01-31' and designation='tester' and deptno=20) or hiredate<'2015-01-01';
 
-4. write a query to display all the record of the employee who is working in deptno 10,30,40,60
+50. write a query to display all the record of the employee who is working in deptno 10,30,40,60
 
 	select * from employee where deptno=10 or deptno=30 or deptno=40 or deptno=50;
 	
@@ -208,84 +208,84 @@ SPECIAL OPERATORS:
 
 IN:
 
-1. write a query to display all the record of the employee who is working in deptno 10,30,40,60.
+51. write a query to display all the record of the employee who is working in deptno 10,30,40,60.
 
 	select * from employee where deptno in(10,30,40,50);
 
-2. write a query to display all record of the employee who is working as salesman, manager, or admin.
+52. write a query to display all record of the employee who is working as salesman, manager, or admin.
 
 	select * from employee where designation in('salesman','manager','admin');
 
 NOT IN:
 
-1. Write a query to display all employees who are working in deptno 50,30,40 excluding salesman and hr
+53. Write a query to display all employees who are working in deptno 50,30,40 excluding salesman and hr
 
 	select * from employee where deptno in(50,30,40) and designation not in('salesman',hr');
 
 BETWEEN:
 
-1. write a query to display all the record of the employee whose salery range within 20000 to 40000
+54. write a query to display all the record of the employee whose salery range within 20000 to 40000
 
 	select * from employee where sal>=20000 and sal<=40000;
 			( OR )
 	select * from employee where sal between 20000 and 40000;
 
-2. Write a query to display all employee who are hired during 2014
+55. Write a query to display all employee who are hired during 2014
 
 	select * from employee where hiredate between '2014-01-01' and '2014-12-31';
 
-3. Write a query to display ename, sal of all emp who are working deptno 10,20 and sal between 40000 to 50000;
+56. Write a query to display ename, sal of all emp who are working deptno 10,20 and sal between 40000 to 50000;
 
 	select *,sal*12 as annual_sal from employee where deptno in (10,20) and sal*12 between 40000 and 50000;
 
 NOT BETWEEN:
 
-1. Write a query to display all record of employee excluding those who are hired in 2017.
+57. Write a query to display all record of employee excluding those who are hired in 2017.
 
 	select * from employee where hiredate not between '2017-01-01' and '2017-12-31';
 
 IS:
 
-1. Write a query to display all record of employee whose deptno is null.
+58. Write a query to display all record of employee whose deptno is null.
 
 	select * from employee where deptno is null;
 
 IS NOT:
 
-1. Write a query to display all record of employee whose deptno is not null;
+59. Write a query to display all record of employee whose deptno is not null;
 
 	select * from employee where deptno is not null;
 
 LIKE:
 
-1. Write a Query to find all record of employee whose name starts with 'R'.
+60. Write a Query to find all record of employee whose name starts with 'R'.
 
 	select * from employee where ename like 'r%';
 
-2. Write a Query to find all record of employee whose name starts with 'R' and having only three character.
+61. Write a Query to find all record of employee whose name starts with 'R' and having only three character.
 
 	select * from employee where ename like 'r__';
 
-3. Write a Query to display all the record of the employee who has atleast two 'l' in  their names;
+62. Write a Query to display all the record of the employee who has atleast two 'l' in  their names;
 
 	select * from employee where ename like '%l%l%';
 
-4. Write a query to display all record of employee and whose name starts with 's' and ends with 'p'.
+63. Write a query to display all record of employee and whose name starts with 's' and ends with 'p'.
 	
 	select * from employee where ename like 's%p';
 
-5. Write a query to display all the record of the employee whose name length in 5 and starts with 's' and 'l' should be second last character.
+64. Write a query to display all the record of the employee whose name length in 5 and starts with 's' and 'l' should be second last character.
 
 	select * from employee where ename like 's__l_';
 
-6. Write a query to display all records of employee, if employee name begins with 's' or 'a'.
+65. Write a query to display all records of employee, if employee name begins with 's' or 'a'.
 
 	select * from employee where ename like 's%' or ename like 'a%';
 
 NOT LIKE:
 
 
-1. Write a query to display all records of employee excluding employee name begins with 'z' and 'p'.
+66. Write a query to display all records of employee excluding employee name begins with 'z' and 'p'.
 	
 	select * from employee where ename not like 'z%' or ename not like 'p%';
 
@@ -293,35 +293,35 @@ AGGREGATE FUNCTIONS:
 
 AVG():
 
-1. write a query to display avg sal of all the employee.
+67. write a query to display avg sal of all the employee.
 
 	select avg(sal) from employee;
 
 COUNT():
 
-2. write a query to count number of records
+68. write a query to count number of records
 
 	select count(*) from employee;
 
 MAX():
 
-3. Write a Query to get maximum sal from employee table.
+69. Write a Query to get maximum sal from employee table.
 
 	select max(sal) from employee;
 
 MIN():
 
-4. Write a Query to get minimum sal from employee table.
+70. Write a Query to get minimum sal from employee table.
 
 	select min(sal) from employee;
 
 SUM():
 
-5. Write a Query to get sum of all sal from employee table.
+71. Write a Query to get sum of all sal from employee table.
 
 	select sum(sal) from employee;
 
-6. Write a Query to get sum,avg,count,min and max salery from the employee table.
+72. Write a Query to get sum,avg,count,min and max salery from the employee table.
 
 	select sum(sal) salsum,max(sal) maxSal,min(sal) minSal,avg(sal) avgSal,count(sal) salCount from employee;
 
@@ -329,109 +329,220 @@ ________________________________________________________________________________
 
 ORDERBY:
 
-1. Write a Query to Display all record of employee according to sal should be desending order
+73. Write a Query to Display all record of employee according to sal should be desending order
 
 	select * from employee order by sal DESC;
 
-2. Write a query to display all the detail of employee and sort the record in descending order of hiredate, if there are more than one employee hired on the same date then the highest sal should be showed first.
+74. Write a query to display all the detail of employee and sort the record in descending order of hiredate, if there are more than one employee hired on the same date then the highest sal should be showed first.
 
 	select * from employee order by hiredate desc,sal desc;
 
-3. Write a query to display the name , sal and annual sal and sord record in ascending order of annual sal.
+75. Write a query to display the name , sal and annual sal and sord record in ascending order of annual sal.
 
 	select ename, sal, sal*12 annual_sal from employee order by annual_sal asc;
 
-4. Write a query to display name, designation for all the employee who are working in either of dept 10,20,40 and sort the record in ascending order by their salery.
+76. Write a query to display name, designation for all the employee who are working in either of dept 10,20,40 and sort the record in ascending order by their salery.
 
 	select ename, designation from employee where deptno in (10,20,40) order by sal;
 
 GROUPBY:
 
-1. Write a query to display number of count of the employee working in each dept
+77. Write a query to display number of count of the employee working in each dept
 
 	select count(deptno) from employee group by deptno;
 
-2. Write a Query to display the highest sal of employee in each department.
+78. Write a Query to display the highest sal of employee in each department.
 	
 	select max(sal) from employee group by deptno;
 
-3. Write a Query to display number of tester working in each department.
+79. Write a Query to display number of tester working in each department.
 
 	select count(designation),deptno from employee where designation='tester' group by deptno;
 
 HAVING:
 
-1. Write a Query to display the deptno which has atleast 2 clerk working.
+80. Write a Query to display the deptno which has atleast 2 clerk working.
 
 	select deptno from employee where designation='clerk' group by deptno having count(*)>=2;
 
-2. Write a Query to display dept no which has total sal greater than 10000 in each dept.
+81. Write a Query to display dept no which has total sal greater than 10000 in each dept.
 
 	select deptno from employee group by deptno having sum(sal)>10000;
 
-3. Write a Query to display deptno which has atleast 2 employee hired into it on the same date.
+82. Write a Query to display deptno which has atleast 2 employee hired into it on the same date.
 
 	select deptno from employee group by deptno,hiredate having count(*)>1
 
-4. write a Query to display deptno and avg sal of all the departments whose avg sal is greater than 15000 by excluding the employee whose names begins with 'r';
+83. write a Query to display deptno and avg sal of all the departments whose avg sal is greater than 15000 by excluding the employee whose names begins with 'r';
 
 	select deptno,avg(sal) from employee where ename not like 'r%' group by deptno having avg(sal)>15000;
 
 SUBQUERIES:
 
-1.Write a query to display name of all the employees who were hired after 'jomon'.
+84.Write a query to display name of all the employees who were hired after 'jomon'.
 
 	select ename from employee where hiredate>(select hiredate from employee where ename='ram');
 
-2. Write a Query to display name of all employee who is working for research dept.
+85. Write a Query to display name of all employee who is working for research dept.
 
 	select ename from employee where deptno=(select deptno from department_info where dname='research');
 
-3. Write a Query to display name of employee who is working in location which has atleast one 'a' in its name.
+86. Write a Query to display name of employee who is working in location which has atleast one 'a' in its name.
 
 	select ename from employee where deptno in (select deptno from department_info where location like'%a%');
 
-4. WAQTD second maximum sal
+87. WAQTD second maximum sal
 
 	select max(sal) from employee where sal<(select max(sal) from employee);
 
-5. WAQTD dept name which has atleast two 'clerk'.
+88. WAQTD dept name which has atleast two 'clerk'.
 
 	select dname from department_info where deptno in(select deptno from employee where designation='clerk' group by deptno having count(*)>=2);
 
-6. WAQTD the third maximum salery.
+89. WAQTD the third maximum salery.
 
 	select max(sal) from employee where sal<(select max(sal) from employee where sal<(select max(sal) from employee));
 
-7. WAQTD name of the employee whose were hired before 'justy' and their sal is greater than 'viji'.
+90. WAQTD name of the employee whose were hired before 'justy' and their sal is greater than 'viji'.
 
 	select ename from employee where hiredate<(select hiredate from employee where ename='justy') and sal>(select sal from employee where ename='viji');
 
 INER JOIN:
 
-1. WAQTD dname, location of all the employees whose sal >= 40000.
+91. WAQTD dname, location of all the employees whose sal >= 40000.
 
 	select dname,location from department_info d inner join employee e on d.deptno=e.deptno and sal>=40000;
 
-2. WAQTD employee name and all the detail of the department if employee were hiredate after 2015 and working in delhi or banglore.
+92. WAQTD employee name and all the detail of the department if employee were hiredate after 2015 and working in delhi or banglore.
 
 	select * from employee e inner join department_info d on e.deptno=d.deptno and hiredate>'2015-12-31' and location in('delhi','banglore');
 
-3. WAQTD ename,dname if the ename starts with 's' or 'p' and their dname has atleast one 'e' in it.
+93. WAQTD ename,dname if the ename starts with 's' or 'p' and their dname has atleast one 'e' in it.
 
 	select ename,dname from employee e inner join department_info d on e.deptno=d.deptno and (ename like 's%' or ename like 'p%') and dname like '%e%';
 
 
 OUTER JOIN:
 
-1. WAQTD a dept name which do not have employee working in it.
+94. WAQTD a dept name which do not have employee working in it.
 
 	select dname from department_info d left outer join employee e on d.deptno=e.deptno where empid is null;
 
-2. WAQT get ename who is not working for any dept.
+95. WAQT get ename who is not working for any dept.
 
 	select ename from employee e left outer join department_info d on e.deptno=d.deptno where e.deptno is null;
 
-NATURAL JOIN:
 
-1. 
+SINGLE ROW FUNCTION:
+
+1. CHARACTER SINGLE ROW FUNCTION:
+		 
+i) Case
+
+96. WAQTD Convert lower case to upper case
+	select upper(ename) from employee;
+97. WAQTD Convert upper case to lower case
+	select lower(ename) from employee;
+98. WAQTD conerts first letter to upper case and every other words to lower case.
+	select initcap(ename) from employee;
+
+ii) Character
+99. WAQTD length()
+	select length(ename) from employee;
+100. WAQTD concat()
+	select concat(ename,' + ',mgr) from employee;
+101. WAQTD reverse()
+	select reverse(ename) from employee; 
+102. WAQTD replace()
+	select replace('tyagu','y','i') from tablename;
+103. substr()
+	select substr(ename,1,2) from employee;
+						(OR)
+	select substr(ename,4) from employee;
+104. WAQTD Position()
+	select position('i' in ename) from employee;
+	select position('Sql' in 'postgeSql') from employee;
+105. WAQTD trim()
+	Leading - select trim(leading 'm' from 'madam');
+	Trailing - select trim(trailing 'm' from 'madam');
+	Both - select trim('m' from 'madam') (OR) select trim(both 'm' from 'madam');
+
+2. NUMBER SINGLE ROW FUNCTION:
+
+106. WAQTD mod()
+	select mod(10,3);
+107. WAQTD Power()
+	select power(3,2);
+108. WAQTD Round()
+		Without Scale:
+			CASE 1:
+
+			Syntax - select round(number);
+			ex - select round(6782.4); ----> 6782
+
+		With Scale:
+				CASE 2:
+				select round(6782.437,2); ----> 6782.44
+
+				CASE 3:
+				select round(6722.345,-2);
+			
+109. WAQTD abs()
+	select abs(-122)  ----- output-> 122
+
+110. WAQTD sqrt()
+	select sqrt(4);
+	
+111. WAQTD trunce()
+	 select trunce(56.6) -> 56
+
+3. DATE AND TIME SINGLE ROW FUNCTION:
+
+112. WAQTD current_date:
+	 select current_date;
+		(OR)
+	select now()::date;
+
+113. WAQTD Current_time:
+	select current_time;
+		(OR)
+	select now()::time;
+
+114. WAQTD Both date and time:
+	select clock_timestamp();
+		(OR)
+	select now();
+
+115. WAQTD Calculate Age:
+	 select age(timestamp '2020-05-29',timestamp '1998-04-14');
+
+116. WAQTD Calculate Century:
+	select extract(century from timestamp '2020-05-29');
+
+117. WAQTD Calculate Decade:
+	select extract(decade from timestamp '2020-05-29');
+
+118. WAQTD Calculate day:
+	select extract(day from timestamp '2020-05-29');
+
+119. WAQTD Calculate which day it is in a week:
+	select extract(dow from timestamp '2020-05-29'); { it will provide a number from (0 to 6) indicates (sunday to saturday) }
+			dow -> day of the week
+			
+120. WAQTD Calculate which day it is in a week:
+	select extract(doy from timestamp '2020-05-29');
+			doy -> day of the year
+
+121. WAQTD Calculate which week it is in a year:
+	select extract(week from timestamp '2020-05-29');
+
+122. WAQTD Calculate which month it is in a year:
+	select extract(month from timestamp '2020-05-29');
+
+123. WAQTD Calculate hours:
+	select extract(hours from timestamp '2020-05-29 13:13:13');
+
+124. WAQTD Calculate minute:
+	select extract(min from timestamp '2020-05-29 13:13:13');
+
+	
