@@ -205,6 +205,31 @@ DQL:
 			Syntax --> Select */Column_name from table_name where condition;
 			Example --> Select * from emp where id=10;
 	
+TCL:
+
+	-> It is a unit of work that performed against a data base.
+	-> Transaction control commands are always used with DML commands ( Insert, Update, Delete).
+	
+	TCL COMMANDS:
+		1. rollback
+		2. commit
+		3. savepoint
+
+	RollBack:
+		step 1:
+			begin;
+		step 2:
+			DML Operation
+		step 3:
+			rollback;
+		step 4:
+			commit;
+
+	ACID properties:
+	Atomicity
+	Consistency
+	Isolation
+	Durability
 Expressions:
 	1. It is a statement, Which gives some result.
 	2. It consists of operators and operands.
@@ -393,7 +418,7 @@ Scalar Functions:
 
 				Syntax - select  position('search string' in 'main string') from t_name;
 				eg - select position('i' in ename) from employee;
-					select position('Sql' in 'postgeSql') from employee;
+					select position('Sql' in 'postgreSql') from employee;
 			7. trim()
 				Syntax - select trim([leading/trailing/both] <remove string> from <main string>)
 				eg:
@@ -414,20 +439,18 @@ Scalar Functions:
 		3. Round()
 			-> It will round the given number to neareset whole number.
 			Without Scale:
-			CASE 1:
+				CASE 1:
 
-			Syntax - select round(number);
-			ex - select round(6782.4); ----> 6782
+				Syntax - select round(number);
+				ex - select round(6782.4); ----> 6782
 
 			With Scale:
-				CASE 2:
-				Positive Scale:
+				CASE 2: ( Positive Scale: )
 
 				Syntax - select round(number,[scale]);
 				ex - select round(6782.437,2); ----> 6782.44
 
-				CASE 3:
-				Negative Scale:
+				CASE 3: ( Negative Scale: )
 		
 				Syntax - select round(number,[negative scale]);
 				ex - select round(6722.345,-2);
@@ -439,6 +462,9 @@ Scalar Functions:
 			ex - select abs(-122)  ----- output-> 122
 
 		5. sqrt()
+			
+			Syntax -> select sqrt(number);
+			Example -> select sqrt(3); 
 	
 		6. trunce()
 			-> It will eliminate the decimal value and always gives the lowest whole value
@@ -661,3 +687,4 @@ ANY OPERATOR:
 	-> It returns true if any of the subquery values meet a certain condition.
 
 	Ex-> select * from employee where ename=any(select ename from employee where deptno=20);
+
