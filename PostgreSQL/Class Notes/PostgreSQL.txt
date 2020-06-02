@@ -225,11 +225,27 @@ TCL:
 		step 4:
 			commit;
 
+		-> We connot rollback already commited transactions.
+
 	ACID properties:
-	Atomicity
-	Consistency
-	Isolation
-	Durability
+	1. Atomicity
+	2. Consistency
+	3. Isolation
+	4. Durability
+	
+	SAVEPOINT:
+		-> making a mark upto to which we can rollback.
+	
+		Syntax -> Savepoint savepoint_name;
+		Example -> Savepoint test;
+		
+	     Savepoint with rollback:
+		
+		Syntax -> rollback to savepoint savepoint_name;
+		Example -> rollback to savepoint test;
+
+	
+
 Expressions:
 	1. It is a statement, Which gives some result.
 	2. It consists of operators and operands.
@@ -688,3 +704,16 @@ ANY OPERATOR:
 
 	Ex-> select * from employee where ename=any(select ename from employee where deptno=20);
 
+NORMALIZATION:
+
+	Key attributes:
+		-> unique characteristics of an entity.
+		-> helps us to uniquely identify a record in a table.
+	Non Key Attributes:
+		-> Other than key attributes all other attributes we have are known as non key attributes.
+	Prime key Attributes:
+		-> It uniquely identifies a record
+	Non prime key attributes:
+		-> Apart from prime key attribute, all other key attributes are non prime key attributes.
+	Composite key Attributes:
+		-> whenever we combine two or more attributes(columns) which helps us to uniquely identifies a record and it is a composite key attribute.
