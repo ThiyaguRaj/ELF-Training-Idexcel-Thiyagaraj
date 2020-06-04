@@ -717,3 +717,95 @@ NORMALIZATION:
 		-> Apart from prime key attribute, all other key attributes are non prime key attributes.
 	Composite key Attributes:
 		-> whenever we combine two or more attributes(columns) which helps us to uniquely identifies a record and it is a composite key attribute.
+	Super key:
+		-> A set of all key attributes.
+	Foreign key:
+		-> It is a key in a table which is primary key in its parent table.
+
+Functional Dependency:
+		
+	-> As the name suggests the Attributes of the table dependent upon each other
+	-> It helps us to prevent data redundancy(repetation of unnecessory data) and anomoly(side effect of DML operation)
+
+	EX-
+		R--->{ X,Y } {empid,name }
+
+		X is determining Y     empid is determining name
+		Y is dependent on X    name is dependent on empid
+
+	Types of Functional Dependencies:
+
+	1. Total Functional Dependency
+
+		* In a relationship all the attributs are determined by a single attributes Which is a key attribute.
+		EX:
+			R----> { A,B,C,D }
+				In this relation A determines all other Attributes.As like following,
+			A ---> {B}
+			A ---> {C}
+			A ---> {D}
+			Here we can say, A ---> B,C,D - (B,C,D dependent on Attribute A)
+
+	2. Partial Functional Dependency
+
+		*A relation is said to have partial functional dependency,
+		* It consists of composite key attribute
+		EX:
+			R----> { A,B,C,D }
+			{A,B} ----> {C}
+				{A} ----> {C} Here C is partialy dependent on A, bcz, C is also dependent on B
+			R ----> {Father,maha,thiyagu,sri}
+			{father,maha} --> Thiyagu .. Here Thiyagu is dependent on both Father and maha
+
+	3. Transitive Functional Dependency:
+		
+		* A relation is said to be a Transitive functional dependency, If there exist such that an attribute is determined by a non key attribute which intern determined by a key attribute.
+
+		EX:
+			A --> {B}
+			B --> {C}
+			
+			Here, A is a key attribute determines B and B is a non key attribute that determines an ttribute C. Then ..
+			
+			A --> {C}. Here attribute C is inderectly determined by key Attribute A.
+
+NORMALIZATION:	
+
+	* The process of decomposinin a table into smaller table inorder to remove redundancy and anomolies by identifying the dependencies is known as Normalization
+							(OR)
+	* The process of reducing a table into its Normal Form.(A table without redundancy and anomoly)
+	
+	Types of Normal Form:
+
+	1. 1NF - First Normal Form
+	2. 2NF - Second Normal Form
+	3. 3N F- Third Normal Form
+	4. BCNF - Boyce Codd Normal Form
+	5. 4NF - Fourth Normal Form
+
+	FIRST NORMAL FORM:
+
+	RULES-
+	1. A table should not have any duplicate rows.
+	2. Every cell in a table should be atomic value.
+
+	SECOND NORMAL FORM:
+
+	RULES-
+	1. Same as first normal form.
+	2. It should not have partial functional dependency.(It should not have composite key attribute)
+
+	THIRD NORMAL FORM:
+
+	RULES-
+	1. It should follow second normal form.
+	2. Table should not have Transitive functional dependency.
+		
+		** Table is in normal form **
+		** Generally we use only 3 normal forms **
+
+	
+	 BOYCE CODD NORMAL FORM:
+
+	RULES-
+	1. It should be in Third Normal Form
