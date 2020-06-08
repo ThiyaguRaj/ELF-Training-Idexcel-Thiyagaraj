@@ -808,4 +808,34 @@ NORMALIZATION:
 	 BOYCE CODD NORMAL FORM:
 
 	RULES-
-	1. It should be in Third Normal Form
+	1. It should be in Third Normal Form.
+
+VIEW:
+	1. View in sql are considered as the virtual table, that can be created on an existing table.
+	2. It is a subset of a real table.
+	3. it is a virtual table or pseudo table which is not real, it wont take any memory and it will displayed as a real table.
+	4. If we delete any record in base table, it will also be reflected in view.
+
+	Syntax - create VIEW view_name AS select * from table_name where condition;
+	Ex - create view dept20 as select * from employee where deptno=20;
+
+	Check View:
+		Syntax - \dv
+
+	Display a Particular view:
+		Syntax - select * from view_name;
+		Ex - select * from dept20;
+	
+	Note:
+	1. View is Nothing but a table.
+	2. If we delete some record in main(base) table it will also be deleted in View.
+	3. whenever we do any DML operation on view, it will reflect back to the base table.
+
+	Drop View:
+	
+	Syntax - drop view View_name;
+
+STORED PROCEDURE:
+	1. It is simlilar to functions.
+
+	Syntax:- create|repace procedure_name(parameter list) Language Language_name(like PLsql/SQL) AS $$ Stored procedure body$$

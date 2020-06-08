@@ -545,4 +545,20 @@ ii) Character
 124. WAQTD Calculate minute:
 	select extract(min from timestamp '2020-05-29 13:13:13');
 
-125. WAQTD 
+VIEW:
+
+125. WAQT create a view with employees working in deptno 20
+
+	create view dept20 as select * from employee where deptno=20;
+
+126. WAQTD list of views.
+
+	\dv
+
+127. WAQTD all records in a view
+
+	select * from dept20;
+
+128. WAQT drop a view.
+
+	drop view dept20;
