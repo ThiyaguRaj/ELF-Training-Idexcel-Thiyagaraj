@@ -562,3 +562,21 @@ VIEW:
 128. WAQT drop a view.
 
 	drop view dept20;
+
+STORED PROCEDURE:
+
+129. WAQT create a stored procedure to insert values into dept table.
+
+		create procedure insert_pro(integer,varchar,varchar)
+		language 'plpgsql'
+		as $$
+		begin
+		insert into department_info values($1,$2,$3);
+		commit;
+		end;
+		$$;
+
+130. WAQT call a stored procedure.
+
+	call insert_data(1,'name');
+

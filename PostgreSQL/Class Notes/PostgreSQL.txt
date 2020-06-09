@@ -838,4 +838,25 @@ VIEW:
 STORED PROCEDURE:
 	1. It is simlilar to functions.
 
-	Syntax:- create|repace procedure_name(parameter list) Language Language_name(like PLsql/SQL) AS $$ Stored procedure body$$
+	Syntax:- create|repace procedure_name(parameter list)
+		 Language Language_name(like PLsql/SQL)
+		 AS $$ 
+			Stored procedure body
+		$$;
+	Ex:-  create procedure insert_pro(integer,varchar,varchar)
+		language 'plpgsql'
+		as $$
+		begin
+		insert into department_info values($1,$2,$3);
+		commit;
+		end;
+		$$;
+
+	CALL A PROCEDURE:
+
+		SYNTAX:- call procedure_name(values);
+		EX:- call insert_data(1,'name');
+
+TRIGGERS:
+
+	 
