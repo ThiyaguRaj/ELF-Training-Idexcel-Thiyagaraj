@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.clearfix{
+    background: linear-gradient(white,rgb(213, 213, 235));
+    height: 50%;
+}
+ul li input{
+    height: 25px;
+    margin: auto 0 auto 0;
+    border-radius: 2px;
+    border: none;
+    
+}
+.navbar{
+    background-color: #3B5998 !important;
+    /* height: 80px;  */
+}
+ul li label{
+    margin: 0;
+    font-size: small;
+    margin-top: 0;
+}
+nav{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin-left: auto;
+    margin-right: 300px;
+}
+ul li{
+    margin-left: 30px;
+}
+.about h4{
+    font-weight: 700;
+}
+nav a h4{
+    font-size: xx-large;
+    font-weight: 700;
+}
+.left-h{
+    margin: 20px 0 0 100px;
+}
+li{
+    list-style-type: none;
+}
+.sign-up-form{
+    float: right;
+    border: 0px solid black;
+    width: fit-content;
+    /* margin: auto; */
+    padding-right: 170px;
+    padding-left: 70px;
+    padding-top: 30px;
+    /* height: 100%; */
+}
+.about{
+    float: left;
+}
+.full{
+    width: 100%;
+}
+.half{
+    width: 49%;
+}
+#surname{
+    float: right;
+}
+li input{
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: 1px solid rgb(235, 227, 227);
+    padding-left: 10px;
+}
+label{
+    margin: 15px 0 15px 0;
+    color: rgb(43, 5, 65);
+    font-weight: 600;
+}
+.about{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+li input[type="radio"]{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+li select{
+    border: none;
+}
+#term{
+    font-size: 10px;
+    margin: 20px 0;
+}
+.bty2{
+    width: 200px;
+    font-weight: 600 !important;
+}
+.sign-up-form li p{
+    margin: 20px 0;
+    font-size: smaller;
+    font-weight: 500;
+}
+.rad{
+    font-weight: 600;
+}

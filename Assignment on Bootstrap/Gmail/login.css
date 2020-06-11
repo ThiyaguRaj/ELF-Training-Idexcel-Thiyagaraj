@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+form{
+    border: 1px solid rgb(206, 202, 202) !important;
+    width: fit-content;
+    padding: 50px;
+    padding-bottom: 80px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+form h3,h6,h4{
+    text-align: center;
+}
+form input{
+    width: 100%;
+    border: 1px solid rgb(206, 202, 202) !important;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px 0 10px 0;
+}
+.b{
+    color: orangered;
+}
+.c{
+    color: yellow;
+}
+.e{
+    color: green;
+}
+.btn{
+    width: 100px;
+}
+form h4{
+    margin: 20px 0;
+}
+select{
+    border: none;
+}
+.menus{
+    text-align: center;
+    margin-top: 30px;
+}
+.bars a{
+    color: black;
+}

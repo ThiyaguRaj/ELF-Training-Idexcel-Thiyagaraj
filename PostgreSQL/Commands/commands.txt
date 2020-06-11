@@ -580,3 +580,39 @@ STORED PROCEDURE:
 
 	call insert_data(1,'name');
 
+USER DEFINED FUNCTIONS:
+
+131. WAQT create a function without parameters.
+
+		create function totalfunction()
+		returns integer
+		as $$
+		declare noofrows integer;
+		begin
+		select count(*) into noofrows from employee;
+		return noofrows;
+		end;
+		$$
+		language plpgsql;
+
+132. WAQT create a parameterized function.
+
+		create function minmax(a integer,b integer,c integer,OUT max integer,OUT min integer)
+		as $$
+		begin
+		max=greatest(a,b,c);
+		min=least(a,b,c);
+		end;
+		$$
+		language plpgsql;
+
+133. WAQT create an user defined function to insert data into a table.
+	
+		create function insert_data(a integer,b varchar,c integer,d integer,e integer)
+		returns integer
+		as $$
+		begin
+		insert into student values(a,b,c,d,e);
+		return 1;
+		$$
+		language plpgsql;

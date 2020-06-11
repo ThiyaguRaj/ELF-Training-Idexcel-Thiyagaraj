@@ -838,7 +838,7 @@ VIEW:
 STORED PROCEDURE:
 	1. It is simlilar to functions.
 
-	Syntax:- create|repace procedure_name(parameter list)
+	Syntax:- create|repace procedure procedure_name(parameter list)
 		 Language Language_name(like PLsql/SQL)
 		 AS $$ 
 			Stored procedure body
@@ -856,6 +856,54 @@ STORED PROCEDURE:
 
 		SYNTAX:- call procedure_name(values);
 		EX:- call insert_data(1,'name');
+
+FUNCTION:
+
+USER DEFINED FUNCTIONS:
+
+	SYNTAX:- 
+		create function function_name(parameter)
+		returns return_datatype
+		AS $$
+		declare declaration;
+		begin
+		<function body>
+		return {variable/value}
+		end;
+		$$
+		language SQL/plpgsql;
+	EXAMPLE:-
+		Without Parameter:
+			create function totalfunction()
+			returns integer
+			as $$
+			declare noofrows integer;
+			begin
+			select count(*) into noofrows from employee;
+			return noofrows;
+			end;
+			$$
+			language plpgsql;
+		With Parameters:
+			create function minmax(a integer,b integer,c integer,OUT max integer,OUT min integer)
+			as $$
+			begin
+			max=greatest(a,b,c);
+			min=least(a,b,c);
+			end;
+			$$
+			language plpgsql;
+
+	USER DEFINED FUNCTION TO INSERT DATA:
+		
+		create function insert_data(a integer,b varchar,c integer,d integer,e integer)
+		returns integer
+		as $$
+		begin
+		insert into student values(a,b,c,d,e);
+		return 1;
+		$$
+		language plpgsql;
 
 TRIGGERS:
 
