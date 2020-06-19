@@ -1,0 +1,128 @@
+PRIMITIVE DATATYPES:
+
+	1. NUMBER
+	2. STRING
+	3. BOOLEAN
+	4. NULL
+	5. UNDEFINED
+
+
+REFERENCE DATA TYPE:
+
+
+	1. ARRAYS:
+
+		var arr1=[1,2,3]
+	
+		Note:
+		1. It is a collection of data.
+		2. Array in javascript can be homogeneous or heterogeneous .
+		3. We can have object inside an array.
+
+
+
+
+	2. OBJECT:
+		1. It is an entity which have its oun states and behaviours.
+		2. object states are stored as key and value pairs.
+		3. They should be seperated by comas.
+
+		Syntax:
+
+		var Variable_name={
+				
+				key : value,
+				key : value
+			  }
+
+		Example:
+
+		var emp = {
+
+			name : "murugan",
+			age : 49
+		  }
+
+		OBJECT INSIDE AN OBJECT:
+
+		EXAMPLE:
+
+		var empl={
+			
+		name : "abc",
+		id :{
+			id : 30,
+			age : 80
+		    }
+		 }
+
+		OBJECT INSIDE AN ARRAY:
+
+			var arr=[1,emp1]
+
+	
+	3. DATE
+	4. MATH
+	5. FUNCTION
+
+
+STATEMENT:
+
+	Something that yields results.
+
+	OPERANDS:
+		Operands are the values on wich operators work.
+
+		TYPES:
+		1. Variables
+		2. Literals
+	OPERATORS:
+		The operators are the symbols which have its own dedicated functionality.
+
+		TYPES OF OPERATORS:
+		1. Arithmetic Operators
+		2. Comparision / Relational Operators
+		3. Logical Operators
+		4. Ternary Operators
+		5. TypeOf Operators
+
+		Arithmetic OPerators:
+			{ +,-,%,/,*,++,-- }
+	
+		Comparision Operators:
+			{ <,>,<=,>=,!=,==,===(Strictly Eaual to),!==(Strictly not Equal to) }
+		
+				=== , !== : Strictly equal to compares datatype of the values and also values
+				 == , !=  : It compares only values.
+
+		Logical Operators:
+			{ AND(&&), OR(||), NOT(!) }
+
+		Ternary Operators:
+			1. It uses ? and : to perform If else condition.
+
+			 Syntax : (condition)?If Statement:Else statement;
+			Example : var a = (1>2)?True:False;
+
+		TypeOf OPerator:
+			1. It will provide the type of the given variable.
+			
+			Syntax  : typeOf(var_name);
+			Example : 
+				var a=1=;
+				typeOf(a); -----> number
+
+			Note:
+				1. Type of null is Object.
+				2. Type of Undefined is Undefined.
+				4. Type of Array is Object.
+TEMPLATE LITERALS:
+
+	1. Template Literals allow embedded Expressions.
+	2. It should be enclosed within Backticks(`).
+
+	Syntax:
+		`string ${expression} string`
+	Example:
+		var a=true;
+		Console.log(`the value gives ${a} as the result`)
