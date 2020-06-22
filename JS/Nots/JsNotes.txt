@@ -71,13 +71,13 @@ STATEMENT:
 	Something that yields results.
 
 	OPERANDS:
-		Operands are the values on wich operators work.
+		Operands are the values on which operators work.
 
 		TYPES:
 		1. Variables
 		2. Literals
 	OPERATORS:
-		The operators are the symbols which have its own dedicated functionality.
+		The operators are the symbols which have its own dedicated functionality used to perform some operation.
 
 		TYPES OF OPERATORS:
 		1. Arithmetic Operators
@@ -126,3 +126,67 @@ TEMPLATE LITERALS:
 	Example:
 		var a=true;
 		Console.log(`the value gives ${a} as the result`)
+
+FUNCTIONS:
+
+	1. Set of code / instructions that perform dedicated task.
+		input --> We may or may not provide input -->number,string, null,undefined,array,object,function --> We can provide multiple input values.
+		return --> It may/may not returns value -->number,string, null,undefined,array,object,function --> We cannot return multiple values.
+
+	Ways to Write Function:
+	1. Named Functions.
+	2. Function Expression
+	3. IIFE - Immediately Invoke Function Expression
+	4. ES6 Arrow Function
+
+	1. Named Function:
+
+		Syntax: function function_name(arguments)
+			{
+				return value;
+			}
+
+	2. Function Expression:
+
+		Syntax:
+			var functionName= function(args)
+					   {
+						return value;
+					   }
+
+	3. IIFE - Immediately Invoke Function Expression
+
+		Syntax:
+			(function(args)
+			{
+				//statement
+			})(args)
+
+			Note:- we should not use semi colons after defining of this function.
+
+	4. ES6 Arrow Function:
+
+	Syntax:
+
+		var func_name = (args) => {
+					  //Statement;
+				       }
+
+		=> - This is called as Fat Arrow.
+
+
+
+	Function as a parameter for a Function:
+
+	ex:
+		function add()
+		{
+			console.log("inside func");
+		}
+		function outer(a,b,func)
+		{
+			console.log("calling func");
+			func();
+		}
+
+		outer(1,2,add());
