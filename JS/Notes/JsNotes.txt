@@ -18,14 +18,30 @@ REFERENCE DATA TYPE:
 		1. It is a collection of data.
 		2. Array in javascript can be homogeneous or heterogeneous .
 		3. We can have object inside an array.
+		4. Array_name.length is used to get the length of an array.
 
+		Empty value in Array:
+		1. We can Acheive it by skipping the values to that particular index of an array.
 
+		EX:
+			TYPE-1:
+
+			var arr=[];
+			arr[0]=1;
+			arr[2]=2;
+			arr[4]=3;
+			SKIPPED 1st and 4th index
+
+			TYPE - 2:
+
+			var arr=[1,,2,,3,4,5];
 
 
 	2. OBJECT:
 		1. It is an entity which have its oun states and behaviours.
 		2. object states are stored as key and value pairs.
 		3. They should be seperated by comas.
+		4. We can store functions inside Objects.
 
 		Syntax:
 
@@ -132,6 +148,7 @@ FUNCTIONS:
 	1. Set of code / instructions that perform dedicated task.
 		input --> We may or may not provide input -->number,string, null,undefined,array,object,function --> We can provide multiple input values.
 		return --> It may/may not returns value -->number,string, null,undefined,array,object,function --> We cannot return multiple values.
+	2. We can store functions inside objects.
 
 	Ways to Write Function:
 	1. Named Functions.
@@ -190,3 +207,121 @@ FUNCTIONS:
 		}
 
 		outer(1,2,add());
+
+DATE:
+
+	CURRENT DATE:
+
+		VERSIONS:
+
+		1. new Date()
+		   
+		2. new Date(year,month,day,hours,mins,seconds,milliseconds)
+		   
+		3. new Date(milliseconds)---->We dont use this majorly
+		    
+		4. new Date(date string) -> "month_name date,year time(HH:MM:SS)
+			eg:- new Date("March 13,1998 12:12:12")
+
+	INBUILD METHODS IN THE DATE OBJECT:
+		1. getFullYear() 
+			-> It will return year in YYYY format.
+		2. getMonth() 
+			-> It will return month in numbers from 0 to 11.
+			-> Month starts from 0.
+		3. getDay()
+			-> It will return Day in numbers from 0 to 6.
+			-> sunday-0 to saturday-6
+		4. getDate()
+			-> It will return current date.
+		5. getHours()
+			-> It will return current hour from 0 to 23.
+		6. getMinutes()
+			-> It will return current minute from 0 to 59.
+		7. getSeconds()
+			-> Return current second from 0 to 59.
+		8. getMilliSeconds()
+			-> return Milliseconds.
+		9. getTime() and Date.now()
+			-> returns the milliseconds since jan 1 1970.
+
+MATH:
+	-> Js provides MATH Object to perform some basic Mathematical Operations.
+
+	1. Math.PI
+		-> It will return the value of pi.
+	2. Math.round(Decimal_value)
+		-> It will round it offf the decimal value to nearest value.
+		eg:- Math.round(12.7) -> 13
+	3. Math.Pow(Base,power)
+		eg:-Math.Pow(2,2) -> 4
+	4. Math.sqrt(number)
+		-> It will return the square root value.
+	5. Math.abs(value)
+		-> It will return the positive value for any value.
+		eg :- abs(-12) -> 12
+	6. Math.ceil(9.2)
+		-> It will round a decimal value to maximum value.
+		eg:- ceil(9.1) -> 10
+	7. Math.floor(value)
+		-> It will round a decimal value to its minimum(lower) value.
+		eg:- floor(9.9) -> 9
+	8. Math.min(value1,...value n)
+		-> It will return min value in list of values
+		eg:- min(1,2,3) -> 1
+	9. Math.max(value1,...value n)
+		-> It will return max value in list of values
+		eg:- min(1,2,3) -> 3
+	10. Math.random()
+		-> It will return random value.
+		-> Value Range from 0 to 1 (1 is excluded).
+
+CONTROL STRUCTURES:
+
+	1. If
+		Syntax:
+			if(condition)
+			{
+				//statement
+			}
+
+	2. If else
+		Syntax:
+			if(condition)
+			{
+				//If block statement
+			}
+			else
+						{
+				//else block statement
+			}
+
+	3. if else if
+			Syntax:
+			if(condition 1)
+			{
+				//If block statement
+			}
+			else if(condition 2)
+			{
+				//else If block statement
+			}
+			else
+						{
+				//else block statement
+			}
+
+	4. Switch
+
+			Syntax:
+			switch(key)
+			{
+			case 1 : statement 1;
+			break;
+			case 1 : statement 2;
+			break;
+			case 1 : statement 3;
+			break;
+			default : statement;
+			break;
+			}
