@@ -278,6 +278,8 @@ MATH:
 
 CONTROL STRUCTURES:
 
+		-> It is Used to control the flow of code.
+
 	1. If
 		Syntax:
 			if(condition)
@@ -325,3 +327,99 @@ CONTROL STRUCTURES:
 			default : statement;
 			break;
 			}
+
+BREAK:
+	-> Break statement breaks the iteration and jumps out of the loop.
+
+CONTINUE:
+	-> Continue Statement 
+
+LOOPING STATEMENTS:
+
+	-> Loops are used to execute lines of code repeatedly n number of times.
+	
+	1. WHILE:
+		Syntax:
+			while(condition)
+			{
+				//statement;
+			}
+	2. DO WHILE:
+		Syntax:
+			do
+			{
+				//statement;
+			}
+			while(condition)
+	3. FOR:
+		Syntax:
+			for(Initialization ; condition ; increment/decrement)
+			{
+				//statement;
+			}
+
+		NOTE:
+		1. We cannot use this for loop with Objects.
+		2. It doesn't ignore empty value.
+		3. break is supported.
+		4. It ignores the extra property without index value.
+	
+	4. FOR OF:
+		-> It mainly works with array.
+		Syntax:
+			for( variable declaration of Array_name)
+			{
+				//statement
+			}
+		Example:
+			var arr=[1,2,3,4];
+			var varName;
+			for(varName of arr)
+			{
+				console.log(varName);    		------> It will return each and every element of an array
+			}
+
+		NOTE:
+		1. We cannot use this for loop with Objects.
+		2. It doesn't ignore empty value.
+		3. break is supported.
+		4. It ignores the extra property without index value. 
+
+	5. FOR IN:
+		Syntax:
+			for(variable declaration in Object)
+			{
+				//statement
+			}
+		Example:
+			ARRAY:
+			var arr=[1,2,3,4];
+			var varName;
+			for(varName in arr)
+			{
+				console.log(varName);    		------> It will return index values of every element
+			}
+
+			OBJECT:
+			var person={
+				'name' : "abc",
+				'age' : 20
+				   }
+			for(const key in person)
+			{
+				console.log(person[key]);
+			}
+
+		IN CASE;
+		1. Of Array -> It will return index.
+		2. Of Object -> It will return key.
+
+		NOTE:
+		1. It works with objects.
+		2. This Object can be of Array or JS Object.
+		3. Empty value will be ignored.
+		4. Break will be supported.
+		5. It also supports the extra property without index value.
+
+	6. FOR EACH:
+		Syntax:
