@@ -36,6 +36,68 @@ REFERENCE DATA TYPE:
 
 			var arr=[1,,2,,3,4,5];
 
+		INBUILD METHODS:
+		PROPERTIES:
+			Array.length -> It will return the length of an array.
+		1. Array.isArray(array_name) -> boolean
+		2. Array.include(search_element, index value at which the element is to be searched) -> boolean
+			-> It is used to find ,if a particular value is present in an array or not
+		3. Array.indexOf(search_element,from index)
+		4. push(item) -> used to insert the value in the last index. - > It will return the number of elements of an array.
+		5. pop() -> It will removes the last element of an array. - > It will return the number of elements of an array.
+		6. unshift() -> Insert the values at the first index. - > It will return the number of elements of an array.
+		7. shif() -> Removes the element in the first index. -> It will return the number of elements of an array.
+		8. join(seperator in string format) -> It will join all the elements with the seperator that we pass.
+		9. splice(startIndex,delete_count,replace_items) -> It will remove the elements from the specified index upto count and it will print replace_items instead of replaced elements.
+				-> delete_count and replace_items are optional.
+				-> Original array will be affected.
+		10. slice(start_index,end_index) -> create subset of the array.
+			startindex-> from which index subset is to created
+			endindex-> upto which index subset id to created.
+			NOTE:
+			1. It will not affect original Array.
+			2. EndIndex will be excluded in the subset.(i.e) slice(1,6)-> 1,2,3,4,5 -> element in 6th index will be excluded.
+		11. forEach((callback(value,index)))
+			syntax:
+				ArrayName.forEach(functiopn(arrayElement,index){
+							console.log(arrayElement+"present in index " +index);
+							      })
+			NOTE:
+			1. arrayElement -> it will returns the array element.
+			2. index -> It will returns the index of the element
+			USES:
+			-> Inorder to iterate through the array elements we can use forEach method
+			-> It calls the function once per element.
+			-> It doesn't operates with empty array
+			-> It doesn't operates with empty elements, but, index will be changed.
+			-> It will ignores the element with extra properties without index.
+		12. filter((callback(value,index){
+						if(condition)
+						{
+							return true;
+						}
+						else
+						{
+							return false;
+						}
+						  })
+			NOTE:
+				True -> Value will inserted to the new array
+				False -> Value will not be inserted to the new array.
+			1. It doesn't affect the original array.
+			2. It will return new array.
+			3. It will also return the empty elements but, it will not modify them.
+			4. It will ignores the element with extra properties without index.
+
+		13. map(callback(value, index){
+						
+						})
+		NOTE:
+		1. It is used to modify an original array and store new values in new array and it returns new array.
+		2. It will not affect original array.
+		3. It will ignore empty elements.
+		4. It will ignores the element with extra properties without index.
+
 
 	2. OBJECT:
 		1. It is an entity which have its oun states and behaviours.
@@ -332,7 +394,7 @@ BREAK:
 	-> Break statement breaks the iteration and jumps out of the loop.
 
 CONTINUE:
-	-> Continue Statement 
+	-> Continue Statement will skips that particular iteration.
 
 LOOPING STATEMENTS:
 
@@ -423,3 +485,41 @@ LOOPING STATEMENTS:
 
 	6. FOR EACH:
 		Syntax:
+
+VARIABLE HOISTING:
+	-> Moving the declaration at the top.
+	-> It will move only the declaration and it will never moves initialization
+	-> It is used to avoid bugs.
+
+	TYPES:
+	1. Global Variable Hoisting
+	2. Local Variable Hoisting
+
+CALL STACK:
+	1. It keeps the record of the functions that we called.
+	2. It works similar to stack(LAST IN FIRST OUT).
+
+STRING METHODS:
+
+	1. toLowerCase():
+		converts string value to lower case.
+	2. toUpperCase():
+		converts string value to Upper case.
+	3. charAt(position):
+		returns the character at the specified index.
+	4. indexOf(searchString,position):
+		return the index of first occurence of that search string.
+		-> If position is specified it starts checking from that specified index.
+	5. concatg(string1,string2,....string n):
+		It will concate multiple string values into a single string.
+	6. includes(start_indexstart ,position)
+		It will chack if the value is present in the string or not
+		-> It will return boolean value.
+	7. replace(search value, replace value)
+		-> It will replace an existing character with the newly specified character.
+		-> If no replace value is passed then the search value is replaced with undefined.
+		eg:- replace('m') -> 'm' will be replaced with undefined.
+	8. subString(start,length):
+		-> It will create a sub string for the original string value.
+	9. trim():
+		-> It will remove all the unwanted white spaces in the start of the string.
