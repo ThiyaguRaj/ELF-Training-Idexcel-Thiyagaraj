@@ -587,3 +587,53 @@ BROWSER OBJECT MODEL( BOM ):
 		4. location.port -> It will provide the port number of a page.
 		5. location.pathname -> It will provide the path name of a page.
 		
+
+DOCUMENT OBJECT MODEL:
+		- It is an programming interface for HTML and XML, which can be modified using Scripting language(JS).
+		- It doesn't affect Original HTML code.
+		- Browser provides DOM.
+
+
+	- Everything is Node in DOM.
+	NODE -> Node can be an Object,element, etc,...
+
+	1. Entire HTML page is converted into DOM and will be displayed in the browser.
+	2. What we see in a browser is based on DOM.
+	
+	W3C standard:
+	- It is platform & language neural interface.
+
+	Three Types of DOM:
+	1. Core DOM - for all type of document
+	2. XML DOM - for XML document.
+	3. HTML DOM - for HTML document.
+
+	HTML DOM:
+	- Using this HTML DOM , JavaScript gets all the power to make our web pages Dynamic.
+	
+		Functions:
+		1. We can change the HTML elements in pages.
+		2. We can change the attributes of elements in pages.
+		3. We can add CSS Styles.
+		4. We can remove the existing Attributs/Elements.
+		5. We can add new Attributes/Elements.
+		6. We can create/react events.
+		
+		DOM TREE:
+		1. Always 'Document' should be the root element of all elements.
+
+					Document
+
+				       Document Type
+		
+					 HTML
+
+			Head				Body
+			
+			Title				p	h2	script
+
+			#Content		    #Content #Content  #Content
+
+
+	DOM METHODS:
+	
