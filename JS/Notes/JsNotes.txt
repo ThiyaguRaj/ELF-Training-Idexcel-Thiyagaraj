@@ -510,7 +510,7 @@ STRING METHODS:
 	4. indexOf(searchString,position):
 		return the index of first occurence of that search string.
 		-> If position is specified it starts checking from that specified index.
-	5. concatg(string1,string2,....string n):
+	5. concat(string1,string2,....string n):
 		It will concate multiple string values into a single string.
 	6. includes(start_indexstart ,position)
 		It will chack if the value is present in the string or not
@@ -523,3 +523,67 @@ STRING METHODS:
 		-> It will create a sub string for the original string value.
 	9. trim():
 		-> It will remove all the unwanted white spaces in the start of the string.
+
+BROWSER OBJECT MODEL( BOM ):
+	Using BOM we can interact with the browser.
+
+	Window(object):
+		It will be present in all the browser.
+		-> Every global variable are automatically becomes the properties of Window Object
+		-> Every global methods are automatically becomes the functions of Window Object.
+			
+		Inbuild properties of Window object:
+		1. innerHeight:
+			Display height of the page(only content area)
+		2. innerWidth:
+			Display width of the page(only content area)
+
+		Inbuild Methods of Window Objects:
+		1. prompt():
+			It is used to take the user input.
+		2. alert():
+			It is used to give some message or Notification.
+		3. confirm():
+			It returns either true or false.
+			-> If you click on 'OK' then it returns true.
+			-> If you click on 'CANCEL' then it returns false
+		4. open():
+			-> It It is used to open a new tab.
+		5. close():
+			-> close the current tab.
+		6. console():
+			-> We can call log() method using console Object
+				eg:-
+				console.clear() -> It will clear the console.
+
+	History(Object):
+		-> There are no properties.
+		
+		Methods:
+		1. back():
+			-> It is used to navigate from current page to previous page.
+		2. forward():
+			-> It is used to navigate from current page to Next page.
+
+	URL:
+		URL Pattern: 
+			protocol://hostname:port/pathname
+			
+			Protocol -> It is the mediator between browser and server. This is not mandatory, as browser will provide internally.case INSENSITIVE.
+					TYPES:
+					1. HTTP -> It will not Encrypt the data. So it is not secured
+					2. HTTPS -> It Encrypts the data. So, it is secured
+			Hostname -> where our web pages are located. It can be IP address or Computer Name. It is mandatory. case INSENSITIVE
+			Port number-> number where the server is located.It is not mandatory
+			path name -> name of the path.not mandatory. case SENSITIVE.
+	Location(Object):
+		-> It helps us to get Hostname,port number, path name,etc.
+		-> It has no methods.
+
+		PROPERTIES OF LOCATRION OBJECT:
+		1. location.href -> It will provide the complete url of a page.
+		2. location.protocol -> It will provide the protocol of a page.
+		3. location.hostname -> It will provide the hostname of a page.
+		4. location.port -> It will provide the port number of a page.
+		5. location.pathname -> It will provide the path name of a page.
+		
