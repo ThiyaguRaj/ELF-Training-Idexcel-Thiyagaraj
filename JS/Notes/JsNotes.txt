@@ -1,3 +1,7 @@
+JAVASCRIPT:
+	JavaScript is a programming language that adds interactivity to your website. This happens in games, in the 
+behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.	
+
 PRIMITIVE DATATYPES:
 
 	1. NUMBER
@@ -634,6 +638,37 @@ DOCUMENT OBJECT MODEL:
 
 			#Content		    #Content #Content  #Content
 
+	EVENT:It is an Action like 
+		-> Hover, click, submit,...
+	EventListener: It will tell that there is an action and somebody needs to handle it.
+			-> Attribute is the EventListener in JS.
+			-> Attributes are onClick, onSubmit, onMouseHover.
+	EventHandler: It handles the action. 
+			-> Function is the EventHandler in JS.
 
-	DOM METHODS:
+	innerText:
+		-> It will only returns the content.		
+		-> Retrieves the data and set content of tag as a plain text.
+	innerHTML::
+		-> It returns the entire element.
+		-> It retrieves the data and set content as HTML format.
 	
+	DOM METHODS:
+
+	1. write() -> The content inside the write method will be displyed inside the html page.
+		   -> It will be loaded, once after the entire html page is loaded and it will delete other existing html elements and it will add new content.
+		NOTE:
+		1. we can pass objects, variables, tags etc,...
+
+	2. open() -> It opens the output stream to write.
+	3. close() -> It will close the output stream to write.
+	4. writeln() -> It is similar to java println() method.
+		     -> We have to use pre tag inorder to use writeln().
+	5. createElement(element):
+		ex -> document.createElement('h1')
+		   -> we can create an specified element by using createElement 
+		   -> element -> tagName
+		   -> return -> 
+
+	6. getElementById(id name):
+		-> returns the element with the specified id.
