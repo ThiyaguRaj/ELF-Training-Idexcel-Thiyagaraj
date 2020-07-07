@@ -670,5 +670,45 @@ DOCUMENT OBJECT MODEL:
 		   -> element -> tagName
 		   -> return -> 
 
+	CHANGE THE CONTENT:
+
 	6. getElementById(id name):
-		-> returns the element with the specified id.
+		-> returns the only element with the specified id.
+	7. gatElementByTagName(tag_name):
+		-> It will collect all the tags with specified tag name and it will create HTML collection object.
+		-> Return Type = HTML Object with only specified Tag Name.
+		-> We can iterate through for in method.
+		
+
+	8. getElementByClassName(class_name):
+		Return Type = HTML Object having all the tags with same class name as specified
+
+	9. getElementByName(name):
+		-> return Type = NodeList Object.
+		
+	CHANGE THE STYLES:
+
+	10. querySelector(tag or id or class):
+		-> We use querySelector inorder to change the styles.
+		-> It will return the very first element with the specified tag/classname/id.
+	11. querySelectorAll(tag or id or class):
+		-> It will return all the tags with specified TagName/className.
+
+	
+	APPEND:
+
+	12. appendChild();
+		-> it will add new element to page.
+
+	13. insertBefore(newchild, existing child location)
+		-> It will add new element at the sepecified location.
+		Example:
+			insertBefore(x, document.body.chileNodes[location starts from 0 to end].
+
+	REMOVE:
+
+	14. remove():
+		-> Remove all the content/clears the current page.
+		-> Is good to not use this remove() method.
+
+	
