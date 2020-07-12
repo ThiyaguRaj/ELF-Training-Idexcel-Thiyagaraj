@@ -109,25 +109,44 @@
 // x.innerText="abcdef";
 // document.body.appendChild(x);
 // }
-function validate()
-{
-var form=document.forms['MyForm'];
-var use=form['user'];
-console.log(use.value.length);
-var para = document.getElementById('err');
-if(use.value.length<=5)
-{
+// function validate()
+// {
+// var form=document.forms['MyForm'];
+// var use=form['user'];
+// console.log(use.value.length);
+// var para = document.getElementById('err');
+// if(use.value.length<=5)
+// {
     
-    para.style.display="block";
-    return false;
-}
-else{
-    console.log('satisfies');  
-    para.style.display="none";
-    use.value.clear();
-    console.log();
+//     para.style.display="block";
+//     return false;
+// }
+// else{
+//     console.log('satisfies');  
+//     para.style.display="none";
+//     use.value.clear();
+//     console.log();
     
-    return true;
-}
+//     return true;
+// }
 // return false;
+// }
+
+// var x=document.getElementById('ab');
+// x.addEventListener('mouseover',mouseOver);
+
+// function mouseOver()
+// {
+//     x.innerHTML="hae";
+// }
+
+// var x=document.getElementsByClassName('ab');
+// var y= document.getElementById('aa');
+var x=document.getElementById('aa').addEventListener('click',function(){
+    clickDlt(this);
+})
+
+function clickDlt(ele)
+{
+    ele.remove();
 }
