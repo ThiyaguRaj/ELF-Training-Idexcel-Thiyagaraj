@@ -1,4 +1,4 @@
-JAVASCRIPT:
+ JAVASCRIPT:
 	JavaScript is a programming language that adds interactivity to your website. This happens in games, in the 
 behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.	
 
@@ -63,7 +63,7 @@ REFERENCE DATA TYPE:
 			2. EndIndex will be excluded in the subset.(i.e) slice(1,6)-> 1,2,3,4,5 -> element in 6th index will be excluded.
 		11. forEach((callback(value,index)))
 			syntax:
-				ArrayName.forEach(functiopn(arrayElement,index){
+				ArrayName.forEach(function(arrayElement,index){
 							console.log(arrayElement+"present in index " +index);
 							      })
 			NOTE:
@@ -104,7 +104,7 @@ REFERENCE DATA TYPE:
 
 
 	2. OBJECT:
-		1. It is an entity which have its oun states and behaviours.
+		1. It is an entity which have its own states and behaviours.
 		2. object states are stored as key and value pairs.
 		3. They should be seperated by comas.
 		4. We can store functions inside Objects.
@@ -783,3 +783,102 @@ FORM VALIDATION:
 		eg:-
 			Element.removeEventListener("mouseover",overFunction);
       
+REGULAR EXPRESSION:
+
+	-> It Describes the pattern to be matched(pattern of characters).
+	-> Used for form validation.
+
+	Syntax:
+		/pattern/modifier.
+
+		PATTERN --> whatever the things we need to do.
+
+		[a-z] -> between a to z.
+		[^a-z] -> not between a to z.
+		[0-9] -> between 0 to 9.
+		[^0-9] -> not between 0 to 9.
+
+			How To Get Patterns:
+				
+
+		MODIFIER:
+			i -> case insensitive matching --> It will stops checking at the first occurence.
+			g -> It won't stops checking at the first occurence.
+
+		METHODS:
+
+			1.compile()
+			2.exec()->  it will chwck if the pattern is present in the input or not. It if matches then it returns index of first occurence
+			3.test() -> it will chwck if the pattern is present in the input or not. if it presents, it returns true else it will return false.
+			4.
+
+JSON:
+	-> Java Script Object Notation
+	-> It is a Data Representation Format.
+	-> EVerything in JSON will we represented as STRING.
+	-> It is the most commenly used API'S and configs.
+	-> It is LightWeight and Easy to use.
+	-> It is used to Transfer Data from Two Applications.
+
+	eg:
+		var x= {
+			"name"="ram",
+			"age"="23";
+			}
+
+	Supported Data Types:
+		1. number
+		2. String
+		3. Boolean
+		4. null
+		5. Array
+		6. Object
+			-> All Other datatypes Except these above types.
+			-> Example -> date,function,ect,.....are not supporteds.
+
+	CONVERT JS OBJECT TO JSON FORMAT:
+
+		var x= {
+			"name"="ram",
+			"age"="23";
+			}
+
+			Methods:
+			1. JSON.stringify(JS Object) -> It will convert JS object to JSON String.
+			2. JSON.parse(JSON String) -> It will convert JSON String to JS object.
+
+
+		var jsonFormat = JSON.strigify(x); -> It will convert JS object to JSON String.
+
+
+	CONVERT JSON TO JS OBJECT:
+
+		var obj=JSON.parse(jsonFormat);   -> It will convert JSON String to JS object.
+
+	CONVERT DATE TO STRING:
+		
+		var dob = new Date();
+		var dobString = dob.toJSON();
+
+CACHE MEMORY:
+	-> It is the Temproary Memory
+	-> It stores the data in Key and value pair.
+	Example:
+		localStorage.setItem("key in string format","value in string format/JSON form);
+		var val=localStorage.getItem("key");
+		console.log(val);
+		
+		METHODS:
+		1. localStorage.setItem("key in string format","value in string format/JSON form);
+			-> It is used to store the data
+		2. localStorage.getItem("key");
+			-> It is used to gat the data
+		3.localStorage.key(index):
+			It will return the key value present at the present index.
+		4. localStorege.length():
+			It will return number of data.
+		5. localStorage.removeItem(key):
+			eg - localStorage.removeItem("first");
+				-> It will remove that particular Data.
+		6. localStorage.clear():
+			-> It will clear the entire data in local storage.

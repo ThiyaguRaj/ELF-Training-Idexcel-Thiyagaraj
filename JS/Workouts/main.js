@@ -142,11 +142,67 @@
 
 // var x=document.getElementsByClassName('ab');
 // var y= document.getElementById('aa');
-var x=document.getElementById('aa').addEventListener('click',function(){
-    clickDlt(this);
-})
+// var x=document.getElementById('aa').addEventListener('click',function(){
+//     clickDlt(this);
+// })
 
-function clickDlt(ele)
+// function clickDlt(ele)
+// {
+//     ele.remove();
+// }
+
+var arr=[];
+arr[0]=10;
+arr[1]='raj';
+arr[2]=null;
+arr[3]='abc';
+arr[4]=20;
+arr[5]=50;
+// console.log(arr);
+// var str=arr.join('');
+// console.log(str);
+// console.log(arr.splice(2,3,"deleted"));
+// console.log("main array is"+arr);
+// console.log(arr[4]);
+//slice
+// var arr1=arr.slice(1,6)
+// console.log("subset is"+arr1);
+// arr1.forEach((value,index) => {
+//     console.log(value+" its index is "+index);
+// });
+
+// var filtered=arr.filter(function(val,index){
+//     if(typeof(val)=="number")
+//     {
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// });
+// console.log(filtered);
+// console.log(arr);
+
+function validateFun()
 {
-    ele.remove();
+    var form=document.main;
+    var val=form['mobnum'];
+    console.log(val.value);
+    var exp=new RegExp("[0-9]");
+    var res=exp.test(val.value);
+    
+    if(res)
+    {
+        form.submit();
+        return true;
+    }
+    else{
+        var par=document.getElementById('err');
+        par.innerText="Input a number";
+        var foc=document.getElementById("mobnum");
+        foc.focus();
+        return false;
+    }
+    return true;   
+
 }
