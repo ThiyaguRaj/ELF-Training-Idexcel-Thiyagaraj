@@ -882,3 +882,25 @@ CACHE MEMORY:
 				-> It will remove that particular Data.
 		6. localStorage.clear():
 			-> It will clear the entire data in local storage.
+
+REDIRECT:(Location Object):
+	
+	PROPERTIES:
+
+		location.href=" complete URL ";
+	
+		EXAMPLE:
+			location.href= "https://www.youtube.com";
+		NOTE:
+		-> We can navigate to previous page.
+	METHODS:
+		1. location.replace("https://www.youtube.com");
+		NOTE:
+		-> we cannot navigate to previous page.
+		
+		2. location.reload():
+			-> It will reload the page.
+
+SESSION STORAGE:
+	Session -> It the duration between Login and Logout.  
+		-> It will bw one per a Tab.
