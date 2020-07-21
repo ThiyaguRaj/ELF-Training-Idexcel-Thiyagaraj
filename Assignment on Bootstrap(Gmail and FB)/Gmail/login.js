@@ -1,4 +1,5 @@
-function validateData()
+document.MyForm.addEventListener("submit",validateData,false)
+function validateData(a)
 {
     var form=document.MyForm;
     var inpVal=form['userVal'].value;
@@ -8,9 +9,12 @@ function validateData()
     if(exp1.test(inpVal) || exp2.test(inpVal))
     {
         form.submit();
+        a.returnValue=true;
     }
     else{
         alert("Invalid Email or Mobile number");
         form['userVal'].focus();
+        a.returnValue=false;
     }
+    a.returnValue=false;
 }

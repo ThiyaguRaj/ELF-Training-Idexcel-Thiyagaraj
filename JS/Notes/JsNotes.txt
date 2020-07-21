@@ -904,3 +904,139 @@ REDIRECT:(Location Object):
 SESSION STORAGE:
 	Session -> It the duration between Login and Logout.  
 		-> It will bw one per a Tab.
+
+setTimeout():
+	-> It is used to set Timeout for a Method.
+	-> It occurs only once.
+	-> If we pass date and time object, then time will not be changed
+	EX:
+		setTimeout(Function_name, time in seconds);
+		setTimeout(dateFunc, 2000(2 secs));
+
+
+Object De-Structuring:
+	-> It is an alternative way to assign the properties of an object to group of variables.
+
+	eg:-
+		const person={
+			name : "dhev",
+			age : 23,
+			mob : 1231231231
+		}
+	-> To print name,age and mob...we can use De-Structuring.
+
+	const{name,age,mob}=person;
+	console.log(name);
+	console.log(age);
+	console.log(mob);
+
+	const{name:firstName,age,mob:mobileNumber}=person;
+	console.log(firstName);
+	console.log(age);
+	console.log(mobileNumber);
+
+	function use(details)
+	{
+		const {name,age}=details
+		console.log(name);
+		console.log(name);
+	}
+	use(person);
+
+Array-De-Structuring:
+
+	Normal:
+		var arr=[1,2,3,4,5,6];
+		var a = arr[0];
+		var b = arr[1];
+		console.log(a,b); ------>1,2
+	De-Structuring:(with variable)
+		const[ a,b,c,d,e,f] = arr;
+		console.log(a,b,c,d,e,f); ------>1,2,3,4,5,6
+	De-Structuring:(with single variable)
+		const[a,,b] = arr;
+		console.log(a,,b); ------>1,3 
+	Using Split Method:
+		let [firstName, lastName]="hai hello".split(' ');
+		console.log(firstName); ---> hai
+		console.log(lastName); ---> hello
+
+promise: -----> (important to handle exceptions when building an application)
+	-> It is used to deal with asynchronous operations in javascript.
+
+	Synchronous : Things happen one at a time.
+	Asynchronous : Things can happen at same time.(like thread in java)
+
+	-> It is an Object in JS and it has 3 States.
+			1. pending
+			2. resolve
+			3. rejected - if we didnt get any response.
+			4. pending
+	peomise Possibilities:
+		-> Either it is kept or ignored.
+		-> if it is kept it will go to resolved state.
+		-> If it is ignored then it will go to rejected state.
+
+		methods:
+			1. then() -> Used to get response.
+			2. catch() -> used to handle rejection
+
+CLASS:
+
+	class ClassName{
+
+		constructor(name)
+		{
+			this.name = name;
+		}
+
+		getName()
+		{
+			return this.name;
+		}
+	}
+	
+	Object Creation For class:
+		var obj = new ClassName("tyagu");
+		console.log(obj.getName());
+
+STATIC:(methods):
+		static getName()
+		{
+			return this.name;
+		}
+		-> It is one for class.
+
+INHERITANCE:
+	-> use "extends" keyword.
+	-> super Class Constructor should be called inside subClass constructor by using super() keyword.
+
+	eg-
+
+		class car{
+
+		constructor(brand)
+		{
+			this.brand = brand;
+		}
+		}
+
+		class otherCar extends car{
+			constructor(brand,model)
+			{
+				super(brand);
+				this.model=model;
+			}
+		}
+		var obj = new otherCar("audi","A11");
+
+NAVIGATOR(Object):
+	-> Used to get lattitude and longitude of our location.
+
+JSX(JavaScript XML):
+	-> Combination of javaScript and XML codes.
+		eg-
+			var x = <person> </person>
+			
+BABEL:
+	-> It is a Tool to convert JSX in to our corresponding language Syntax

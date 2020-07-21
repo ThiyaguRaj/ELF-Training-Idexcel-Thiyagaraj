@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout</title>
+    <style>
+        form{
+            border: 1px solid black;
+            width: max-content;
+            padding: 30px;
+            margin: auto;
+            text-align: center;
+            /* margin-top: 40vh; */
+        }
+        form input{
+            width: 250px;
+            height: 30px;
+            margin: 10px;
+        }
+        button{
+            background-color: green;
+            width: 100px;
+            height: 30px;
+        }
+        button:hover{
+            background-color: rgb(16, 201, 16);
+        }
+    </style>
 </head>
 <body>
         <!-- <h1>Favourite Shots</h1>
@@ -31,14 +54,22 @@
             <li class="ab">hhh</li>
             <li class="ab">cena</li>
         </ul> -->
-        <form name="main" action="" method="get" onsubmit="validateFun();return false">
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <input type="text" name="num" id="mobnum" name="mobnum">
-            <br><br>
-            <button type="submit" name="sub" id="sub">submit</button>
-            <br><br>
-            <p id="err"></p>
+        <form action="" name="signForm" method="get">
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name"><br>
+            <input type="text" name="sname" id="sname" placeholder="Enter sur Name"><br>
+            <input type="email" placeholder="Enter Mail" name="signMail" id="signMail"><br>
+            <input type="password" placeholder="Enter Password" name="signPass" id="signPass"><br>
+            <input type="date" name="signDate" id="signDate"><br>
+            <button type="submit" id="signSub">Signin</button>
         </form>
-    <script src="/main.js"></script>
+        <br>
+        <form name="main" action="" method="get">
+            <input type="text" placeholder="Enter Email" name="inpMail" id="inpMail">
+            <input type="password" placeholder="Enter Password" name="inpPass" id="inpPass">
+            <br><br>
+            <button type="submit" name="inpSub" id="inpSub">Login</button>
+        </form>
+        <div id="displayDiv"></div>
+    <script src="store.js"></script>
 </body>
 </html>
