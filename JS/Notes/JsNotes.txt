@@ -1,6 +1,7 @@
- JAVASCRIPT:
-	JavaScript is a programming language that adds interactivity to your website. This happens in games, in the 
-behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.	
+JAVASCRIPT:
+	JavaScript is a programming language that adds interactivity to your website.
+	This happens in games, in the behavior of responses when buttons are pressed 
+	or with data entry on forms; with dynamic styling; with animation, etc.	
 
 PRIMITIVE DATATYPES:
 
@@ -972,7 +973,7 @@ promise: -----> (important to handle exceptions when building an application)
 			2. resolve
 			3. rejected - if we didnt get any response.
 			4. pending
-	peomise Possibilities:
+	promise Possibilities:
 		-> Either it is kept or ignored.
 		-> if it is kept it will go to resolved state.
 		-> If it is ignored then it will go to rejected state.
@@ -1039,4 +1040,4 @@ JSX(JavaScript XML):
 			var x = <person> </person>
 			
 BABEL:
-	-> It is a Tool to convert JSX in to our corresponding language Syntax
+	-> It is a Tool to convert JSX in to our corresponding language Syntax.

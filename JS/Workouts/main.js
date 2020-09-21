@@ -151,13 +151,13 @@
 //     ele.remove();
 // }
 
-var arr=[];
-arr[0]=10;
-arr[1]='raj';
-arr[2]=null;
-arr[3]='abc';
-arr[4]=20;
-arr[5]=50;
+// var arr=[];
+// arr[0]=10;
+// arr[1]='raj';
+// arr[2]=null;
+// arr[3]='abc';
+// arr[4]=20;
+// arr[5]=50;
 // console.log(arr);
 // var str=arr.join('');
 // console.log(str);
@@ -183,26 +183,38 @@ arr[5]=50;
 // console.log(filtered);
 // console.log(arr);
 
-function validateFun()
-{
-    var form=document.main;
-    var val=form['mobnum'];
-    console.log(val.value);
-    var exp=new RegExp("[0-9]");
-    var res=exp.test(val.value);
+// function validateFun()
+// {
+//     var form=document.main;
+//     var val=form['mobnum'];
+//     console.log(val.value);
+//     var exp=new RegExp("[0-9]");
+//     var res=exp.test(val.value);
     
-    if(res)
-    {
-        form.submit();
-        return true;
-    }
-    else{
-        var par=document.getElementById('err');
-        par.innerText="Input a number";
-        var foc=document.getElementById("mobnum");
-        foc.focus();
-        return false;
-    }
-    return true;   
+//     if(res)
+//     {
+//         form.submit();
+//         return true;
+//     }
+//     else{
+//         var par=document.getElementById('err');
+//         par.innerText="Input a number";
+//         var foc=document.getElementById("mobnum");
+//         foc.focus();
+//         return false;
+//     }
+//     return true;   
 
+// }
+
+class Sub{
+    constructor(a){
+        this.a=a;  
+    function sum() {
+        return 22;
+    }
 }
+}
+let obj = new Sub(12);
+obj.sum();
+console.log("kdehufrheuf");

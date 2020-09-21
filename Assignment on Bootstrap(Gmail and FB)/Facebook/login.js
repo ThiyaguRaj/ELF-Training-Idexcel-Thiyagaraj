@@ -8,11 +8,15 @@ function validate(e) {
     var passwordExp = new RegExp('^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$');
     if (emailExp.test(inpVal) || phoneExp.test(inpVal)) {
         if (passwordExp.test(password)) {
-            var msgSuccess = document.getElementById('sucsMsg');
-            msgSuccess.innerText = "successsssssssssssssssss";
-            msgSuccess.style.display = "block";
-            msgSuccess.style.color = "red";
-            msgSuccess.style.fontSize = "large";
+            // var msgSuccess = document.getElementById('sucsMsg');
+            // msgSuccess.innerText = "successsssssssssssssssss";
+            // msgSuccess.style.display = "block";
+            // msgSuccess.style.color = "red";
+            // msgSuccess.style.fontSize = "large";
+            // document.body.append(msgSuccess);
+            let sucss = document.createElement('p');
+            sucss.innerText = "Login Successfull";
+            document.body.append(sucss);
             form.submit();
             e.returnValue = true;
         }

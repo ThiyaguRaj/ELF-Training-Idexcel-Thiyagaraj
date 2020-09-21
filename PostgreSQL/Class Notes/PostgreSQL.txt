@@ -13,7 +13,7 @@ APPLICATION:
 
 DBMS:
 	1. DBMS stands for Database management System.
-	2. The DBMS manages incoming data, organizes it, and provides ways for the data to be modified or extracted by users or othe r programs.
+	2. The DBMS manages incoming data, organizes it, and provides ways for the data to be modified or extracted by users or other programs.
 	3. Some DBMS examples include MySQL, PostgreSQL, Microsoft Access, SQL Server, FileMaker, Oracle.
 
 TYPES OF DBMS:
@@ -200,7 +200,7 @@ DQL:
 			Example --> select name from student;
 
 	Where Clause:
-		Where clause is used to apply some condition.
+		Where clause is used to apply some condition.Used to filter the result set or records.
 
 			Syntax --> Select */Column_name from table_name where condition;
 			Example --> Select * from emp where id=10;
@@ -676,7 +676,7 @@ JOINS:
 		-> If, no common records found, it will gives cartesian join.
 
 		Syntax -> select */c_name from table1 natural join table2;
-		EX -> select ename from employee inner join dept_info;
+		EX -> select ename from employee natural join dept_info;
 	5. Self Join:
 		-> Joining single table using alias name.
 		-> Merging of same table.
@@ -754,7 +754,7 @@ Functional Dependency:
 			R----> { A,B,C,D }
 			{A,B} ----> {C}
 				{A} ----> {C} Here C is partialy dependent on A, bcz, C is also dependent on B
-			R ----> {Father,maha,thiyagu,sri}
+			R ----> {murugesh,maha,thiyagu,sri}
 			{father,maha} --> Thiyagu .. Here Thiyagu is dependent on both Father and maha
 
 	3. Transitive Functional Dependency:
@@ -907,4 +907,18 @@ USER DEFINED FUNCTIONS:
 
 TRIGGERS:
 
-	 
+	-> The Triggers are database callback functions, which are automatically performed/invoked when a specific database event occurs.
+
+	Syntax:
+		create trigger nameof the trigger
+		{befor/after/instead of}			---------> before event/after event(events are - insert,update,....)
+		{insert/update/delete/truncate}		---------> event
+		on table_name{for each row/statement}
+		execute procedure function_name();
+	
+INDEXING:
+
+	syntax:
+		create index index_name on table_name(col_name);
+	ex:-
+		

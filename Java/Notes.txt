@@ -1,0 +1,5 @@
+Static:
+ The memory allocation for static variables will be done once its class gets loaded. Thats why the value for static variables cant be changed for every objects.
+
+Non-Static:\
+ The memory allocation for non-static variables will be done only when the object gets created. Thats why the value for non-static variables can be changed for every objects.
